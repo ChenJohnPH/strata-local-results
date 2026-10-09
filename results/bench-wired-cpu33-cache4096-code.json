@@ -1,0 +1,53 @@
+{
+  "name": "wired-cpu33-cache4096",
+  "kind": "code",
+  "requested_tokens": 256,
+  "runs": [
+    {
+      "elapsed": 21.359000000004016,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 40,
+        "prompt_ms": 7372.258,
+        "prompt_per_token_ms": 184.30644999999998,
+        "prompt_per_second": 5.4257460875623185,
+        "predicted_n": 256,
+        "predicted_ms": 13948.344,
+        "predicted_per_token_ms": 54.699388235294116,
+        "predicted_per_second": 18.281740111944472
+      },
+      "usage": {
+        "completion_tokens": 256,
+        "prompt_tokens": 40,
+        "total_tokens": 296,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "content": "```python\nimport threading\nimport time\nfrom collections import OrderedDict\nfrom typing import Any, Optional, Tuple\n\n\nclass LRUCacheWithTTL:\n    \"\"\"\n    A thread-safe LRU cache with TTL (Time-To-Live) expiration.\n\n    Design:\n    - Uses an OrderedDict to maintain insertion order (LRU behavior).\n    - Each entry stores (value, expiration_time).\n    - On access, entries are moved to the end (most recently used).\n    - On insertion, if the cache is full, the least recently used entry is evicted.\n    - TTL expiration is checked lazily on access and also during cleanup.\n    - Thread safety is ensured via a lock around all operations.\n    \"\"\"\n\n    def __init__(self, max_size: int, ttl: float):\n        \"\"\"\n        Initialize the LRU cache.\n\n        Args:\n            max_size: Maximum number of entries in the cache.\n            ttl: Time-to-live in seconds for each entry.\n        \"\"\"\n        if max_size <= 0:\n            raise ValueError(\"max_size must be a positive integer\")\n        if ttl <= 0:\n            raise ValueError(\"ttl must be a positive number"
+    },
+    {
+      "elapsed": 26.140999999995984,
+      "timings": {
+        "cache_n": 36,
+        "prompt_n": 4,
+        "prompt_ms": 5218.22,
+        "prompt_per_token_ms": 1304.555,
+        "prompt_per_second": 0.7665449137828608,
+        "predicted_n": 256,
+        "predicted_ms": 15244.118,
+        "predicted_per_token_ms": 59.78085490196079,
+        "predicted_per_second": 16.72776345604252
+      },
+      "usage": {
+        "completion_tokens": 256,
+        "prompt_tokens": 40,
+        "total_tokens": 296,
+        "prompt_tokens_details": {
+          "cached_tokens": 36
+        }
+      },
+      "content": "```python\nimport threading\nimport time\nfrom collections import OrderedDict\nfrom typing import Any, Optional, Tuple\n\n\nclass LRUCacheWithTTL:\n    \"\"\"\n    A thread-safe LRU cache with TTL (Time-To-Live) expiration.\n\n    Design:\n    - Uses an OrderedDict to maintain insertion order (LRU behavior).\n    - Each entry stores (value, expiration_time).\n    - On access, entries are moved to the end (most recently used).\n    - On insertion, if the cache is full, the least recently used entry is evicted.\n    - TTL expiration is checked lazily on access and also during cleanup.\n    - Thread safety is ensured via a lock around all operations.\n    \"\"\"\n\n    def __init__(self, max_size: int, ttl: float):\n        \"\"\"\n        Initialize the LRU cache.\n\n        Args:\n            max_size: Maximum number of entries in the cache.\n            ttl: Time-to-live in seconds for each entry.\n        \"\"\"\n        if max_size <= 0:\n            raise ValueError(\"max_size must be a positive integer\")\n        if ttl <= 0:\n            raise ValueError(\"ttl must be a positive number"
+    }
+  ]
+}

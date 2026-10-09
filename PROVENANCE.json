@@ -1,0 +1,10 @@
+{
+  "snapshot_date": "2026-10-10",
+  "upstream": "https://github.com/Niko1221/Strata",
+  "two_pc_fork": "https://github.com/NTRYourWaifu/Strata",
+  "archive_directory_reference": "7add08d",
+  "reference_note": "Reference is from the source archive directory name; this snapshot does not preserve upstream Git history.",
+  "prepared_source_files": 3656,
+  "model_weights_included": false,
+  "credentials_included": false
+}

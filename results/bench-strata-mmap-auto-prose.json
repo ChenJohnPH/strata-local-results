@@ -1,0 +1,32 @@
+{
+  "name": "strata-mmap-auto",
+  "kind": "prose",
+  "requested_tokens": 128,
+  "runs": [
+    {
+      "elapsed": 8.75,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 33,
+        "prompt_ms": 1779.7,
+        "prompt_per_token_ms": 53.93,
+        "prompt_per_second": 18.5,
+        "predicted_n": 128,
+        "predicted_ms": 6933.1,
+        "predicted_per_token_ms": 54.165,
+        "predicted_per_second": 18.5,
+        "draft_n": 88,
+        "draft_n_accepted": 44
+      },
+      "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 128,
+        "total_tokens": 161,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "content": "在熱帶海洋的廣闊水域中，一個看似微不足道的熱氣流，經過一系列複雜的物理過程，最終可能演變成具有毀滅性力量的颱風。要理解這一自然現象的形成機制，我們必須深入探討大氣物理學中的關鍵要素：溫度、濕度、科里奧利力以及低壓系統的形成。\n\n首先，颱風的形成需要特定的環境條件。最核心的前提是海水溫度必須達到攝氏26度以上。當太陽輻射加熱海洋表面，海水蒸發產生大量的水蒸气。這些水蒸气上升到高空，遇冷後凝結成雲滴"
+    }
+  ]
+}

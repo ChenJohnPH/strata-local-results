@@ -1,0 +1,23 @@
+{
+  "elapsed_seconds": 20.19,
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 32,
+    "prompt_ms": 5448.462,
+    "prompt_per_token_ms": 170.2644375,
+    "prompt_per_second": 5.873217065659997,
+    "predicted_n": 96,
+    "predicted_ms": 14648.784,
+    "predicted_per_token_ms": 154.19772631578948,
+    "predicted_per_second": 6.4851799302931905
+  },
+  "usage": {
+    "completion_tokens": 96,
+    "prompt_tokens": 32,
+    "total_tokens": 128,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "content": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,"
+}

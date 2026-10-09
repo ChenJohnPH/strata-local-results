@@ -1,0 +1,76 @@
+{
+  "name": "gpu-dense-cpu33-cache5120",
+  "kind": "digits",
+  "requested_tokens": 96,
+  "runs": [
+    {
+      "elapsed": 7.453000000001339,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 32,
+        "prompt_ms": 3156.606,
+        "prompt_per_token_ms": 98.6439375,
+        "prompt_per_second": 10.137470435017864,
+        "predicted_n": 96,
+        "predicted_ms": 4251.546,
+        "predicted_per_token_ms": 44.75311578947369,
+        "predicted_per_second": 22.344812922169957
+      },
+      "usage": {
+        "completion_tokens": 96,
+        "prompt_tokens": 32,
+        "total_tokens": 128,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "content": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,"
+    },
+    {
+      "elapsed": 7.780999999995402,
+      "timings": {
+        "cache_n": 28,
+        "prompt_n": 4,
+        "prompt_ms": 2435.716,
+        "prompt_per_token_ms": 608.929,
+        "prompt_per_second": 1.6422275831829327,
+        "predicted_n": 96,
+        "predicted_ms": 3624.179,
+        "predicted_per_token_ms": 38.149252631578946,
+        "predicted_per_second": 26.212833306522665
+      },
+      "usage": {
+        "completion_tokens": 96,
+        "prompt_tokens": 32,
+        "total_tokens": 128,
+        "prompt_tokens_details": {
+          "cached_tokens": 28
+        }
+      },
+      "content": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,"
+    },
+    {
+      "elapsed": 6.5,
+      "timings": {
+        "cache_n": 28,
+        "prompt_n": 4,
+        "prompt_ms": 2465.737,
+        "prompt_per_token_ms": 616.43425,
+        "prompt_per_second": 1.6222330280966704,
+        "predicted_n": 96,
+        "predicted_ms": 4002.699,
+        "predicted_per_token_ms": 42.13367368421053,
+        "predicted_per_second": 23.733985493288404
+      },
+      "usage": {
+        "completion_tokens": 96,
+        "prompt_tokens": 32,
+        "total_tokens": 128,
+        "prompt_tokens_details": {
+          "cached_tokens": 28
+        }
+      },
+      "content": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,"
+    }
+  ]
+}

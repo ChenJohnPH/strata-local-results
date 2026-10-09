@@ -1,0 +1,32 @@
+{
+  "name": "strata-resident-auto",
+  "kind": "prose",
+  "requested_tokens": 128,
+  "runs": [
+    {
+      "elapsed": 2.7189999999973224,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 33,
+        "prompt_ms": 398.8,
+        "prompt_per_token_ms": 12.085,
+        "prompt_per_second": 82.7,
+        "predicted_n": 128,
+        "predicted_ms": 2284.0,
+        "predicted_per_token_ms": 17.844,
+        "predicted_per_second": 56.0,
+        "draft_n": 92,
+        "draft_n_accepted": 44
+      },
+      "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 128,
+        "total_tokens": 161,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "content": "在熱帶海洋的廣闊水域中，一個看似微不足道的熱氣流，經過數天的積累與強化，最終可能演變成足以摧毀城市、改變地貌的巨型風暴——颱風。這自然現象的形成過程，是地球大氣系統中能量轉換與物理定律共同作用的结果，其背後隱藏著複雜的熱力學與流體動力學原理。要理解颱風如何形成，我們必須從最基礎的條件開始，逐步剖析其從萌芽到成熟的全过程。\n\n首先，颱風的形成需要特定的地理與氣候條件。最核心的前提是海水溫度必須達到攝氏"
+    }
+  ]
+}

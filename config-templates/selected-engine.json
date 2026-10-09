@@ -1,0 +1,8 @@
+{
+  "engine": "strata",
+  "status": "preparing",
+  "configuration": "two-pc",
+  "model": "Full Qwen3.8-Flash-Next IQ3_S",
+  "retained_models": ["IQ3_XXS", "IQ3_S"],
+  "desktop": "DESKTOP_LAN_IP"
+}
