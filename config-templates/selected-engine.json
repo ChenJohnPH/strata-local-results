@@ -1,8 +1,13 @@
 {
   "engine": "strata",
-  "status": "preparing",
-  "configuration": "two-pc",
-  "model": "Full Qwen3.8-Flash-Next IQ3_S",
-  "retained_models": ["IQ3_XXS", "IQ3_S"],
-  "desktop": "DESKTOP_LAN_IP"
+  "status": "verified",
+  "model": "IQ3_XXS",
+  "retained_models": [
+    "IQ3_XXS",
+    "IQ3_S"
+  ],
+  "transport": "Direct",
+  "split": 42,
+  "context": 16384,
+  "note": "Model and inference summary only; no host, account or security configuration."
 }

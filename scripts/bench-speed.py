@@ -12,6 +12,8 @@ p.add_argument('--tokens', type=int, default=96)
 p.add_argument('--kind', choices=['digits', 'prose', 'code'], default='digits')
 p.add_argument('--url', default='http://127.0.0.1:8080')
 p.add_argument('--key-file')
+p.add_argument('--model', default='qwen3.8-flash-next-iq3_xxs')
+p.add_argument('--spec-min-p', type=float)
 a = p.parse_args()
 prompts = {
  'digits': '請依序輸出數字1到100，用逗號分隔，直接輸出數字。',
@@ -20,10 +22,12 @@ prompts = {
 }
 results = []
 for i in range(a.runs):
-    payload = {'model': 'qwen3.8-flash-next-125b-q2_0',
+    payload = {'model': a.model,
       'messages': [{'role': 'user', 'content': prompts[a.kind]}],
       'max_tokens': a.tokens, 'temperature': 0, 'reasoning_effort': 'none',
       'chat_template_kwargs': {'enable_thinking': False}, 'stream': False}
+    if a.spec_min_p is not None:
+        payload['strata_tune'] = {'spec_min_p': a.spec_min_p}
     headers = {'Content-Type': 'application/json'}
     if a.key_file:
         headers['Authorization'] = 'Bearer ' + Path(a.key_file).read_text().strip()

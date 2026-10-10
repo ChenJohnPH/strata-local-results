@@ -1,0 +1,32 @@
+{
+  "name": "publish-20261010-iq3xxs-warm",
+  "kind": "code",
+  "requested_tokens": 128,
+  "runs": [
+    {
+      "elapsed": 4.969000000011874,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 40,
+        "prompt_ms": 1214.2,
+        "prompt_per_token_ms": 30.355,
+        "prompt_per_second": 32.9,
+        "predicted_n": 128,
+        "predicted_ms": 3719.3,
+        "predicted_per_token_ms": 29.057,
+        "predicted_per_second": 34.4,
+        "draft_n": 113,
+        "draft_n_accepted": 81
+      },
+      "usage": {
+        "prompt_tokens": 40,
+        "completion_tokens": 128,
+        "total_tokens": 168,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "content": "```python\n\"\"\"\nLRU Cache with TTL Expiration, Thread Safety, and Example Usage.\n\nThis module provides a thread-safe LRU (Least Recently Used) cache that\nsupports TTL (Time-To-Live) expiration for cached entries.\n\"\"\"\n\nimport threading\nimport time\nfrom collections import OrderedDict\nfrom typing import Any, Optional, Hashable\n\n\nclass LRUCacheWithTTL:\n    \"\"\"\n    A thread-safe LRU cache with TTL (Time-To-Live) expiration.\n\n    Features:\n    - LRU eviction policy: least recently used items are evicted first.\n    - TTL"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "model": "qwen3.8-flash-next-iq3_xxs",
+  "inference_parameters": {
+    "resident-budget-gib": "24",
+    "expert-cache": "auto",
+    "vram-reserve-mib": "800",
+    "prefill": "512",
+    "spec": "4",
+    "spec-min-p": "0.5",
+    "max-context": "16384",
+    "kv": "int8",
+    "pcie-frac": "0",
+    "suffix-draft": "0",
+    "net-split": "42",
+    "pool-workers": "15",
+    "host-core": "first"
+  },
+  "resident_experts": true,
+  "inference_environment": {
+    "STRATA_RESIDENT_HEADROOM_GIB": "1.25",
+    "STRATA_UNBUFFERED_LOAD": "0"
+  },
+  "note": "Inference parameters only; not a runnable deployment or security configuration."
+}

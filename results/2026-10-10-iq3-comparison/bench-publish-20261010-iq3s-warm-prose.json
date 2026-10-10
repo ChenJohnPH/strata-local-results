@@ -1,0 +1,32 @@
+{
+  "name": "publish-20261010-iq3s-warm",
+  "kind": "prose",
+  "requested_tokens": 128,
+  "runs": [
+    {
+      "elapsed": 4.875,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 33,
+        "prompt_ms": 987.5,
+        "prompt_per_token_ms": 29.924,
+        "prompt_per_second": 33.4,
+        "predicted_n": 128,
+        "predicted_ms": 3825.2,
+        "predicted_per_token_ms": 29.884,
+        "predicted_per_second": 33.5,
+        "draft_n": 90,
+        "draft_n_accepted": 43
+      },
+      "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 128,
+        "total_tokens": 161,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "content": "颱風，這個在氣象學上被稱為「熱帶氣旋」的自然現象，是地球上最具破壞力也最壯觀的天氣系統之一。每當夏季來臨，我們總能從新聞中聽到關於颱風路徑、強度以及可能帶來的風雨影響的報導。然而，究竟是什麼力量驅動了這些直徑可達數百甚至上千公里的巨大風暴？它們又是如何在廣闊的海洋上從無到有，最終演變成足以撼動陸地的自然巨獸？要理解颱風的形成，我們必須深入探討大氣物理學中的熱力學與動力學機制，這是一"
+    }
+  ]
+}

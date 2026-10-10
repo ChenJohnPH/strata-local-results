@@ -1,0 +1,82 @@
+{
+  "name": "publish-20261010-iq3xxs",
+  "kind": "code",
+  "requested_tokens": 512,
+  "runs": [
+    {
+      "elapsed": 11.843999999997322,
+      "timings": {
+        "cache_n": 33,
+        "prompt_n": 7,
+        "prompt_ms": 156.8,
+        "prompt_per_token_ms": 22.4,
+        "prompt_per_second": 44.6,
+        "predicted_n": 512,
+        "predicted_ms": 11625.4,
+        "predicted_per_token_ms": 22.706,
+        "predicted_per_second": 44.0,
+        "draft_n": 444,
+        "draft_n_accepted": 333
+      },
+      "usage": {
+        "prompt_tokens": 40,
+        "completion_tokens": 512,
+        "total_tokens": 552,
+        "prompt_tokens_details": {
+          "cached_tokens": 33
+        }
+      },
+      "content": "```python\n\"\"\"\nLRU Cache with TTL Expiration, Thread Safety, and Example Usage.\n\nThis module provides a thread-safe LRU (Least Recently Used) cache that\nsupports TTL (Time-To-Live) expiration for cached entries.\n\"\"\"\n\nimport threading\nimport time\nfrom collections import OrderedDict\nfrom typing import Any, Optional, Hashable\n\n\nclass LRUCacheWithTTL:\n    \"\"\"\n    A thread-safe LRU cache with TTL (Time-To-Live) expiration.\n\n    Features:\n    - LRU eviction: When the cache is full, the least recently used item is evicted.\n    - TTL expiration: Each cached entry has an optional TTL. Expired entries are\n      removed lazily on access or proactively during cleanup.\n    - Thread safety: All operations are protected by a reentrant lock.\n    - Lazy expiration: Expired entries are checked on access to avoid unnecessary\n      background threads.\n    - Optional proactive cleanup: A method to clean up all expired entries.\n\n    Args:\n        max_size: Maximum number of items in the cache.\n        default_ttl: Default TTL in seconds for entries. None means no expiration.\n    \"\"\"\n\n    def __init__(self, max_size: int = 128, default_ttl: Optional[float] = None):\n        if max_size <= 0:\n            raise ValueError(\"max_size must be a positive integer\")\n        if default_ttl is not None and default_ttl <= 0:\n            raise ValueError(\"default_ttl must be a positive number or None\")\n\n        self._max_size = max_size\n        self._default_ttl = default_ttl\n        self._cache: OrderedDict[Hashable, tuple[Any, Optional[float]]] = OrderedDict()\n        self._lock = threading.RLock()\n\n    def get(self, key: Hashable) -> Optional[Any]:\n        \"\"\"\n        Retrieve a value from the cache.\n\n        If the key exists and has not expired, the value is returned and the\n        entry is marked as recently used. If the key does not exist or has\n        expired, None is returned.\n\n        Args:\n            key: The cache key.\n\n        Returns:\n            The cached value if present and not expired, otherwise None.\n        \"\"\"\n        with self._lock:\n            if key not in self._cache:\n                return None\n\n            value, expiry = self._cache[key]"
+    },
+    {
+      "elapsed": 11.312999999994645,
+      "timings": {
+        "cache_n": 33,
+        "prompt_n": 7,
+        "prompt_ms": 147.7,
+        "prompt_per_token_ms": 21.1,
+        "prompt_per_second": 47.4,
+        "predicted_n": 512,
+        "predicted_ms": 11138.7,
+        "predicted_per_token_ms": 21.755,
+        "predicted_per_second": 46.0,
+        "draft_n": 457,
+        "draft_n_accepted": 337
+      },
+      "usage": {
+        "prompt_tokens": 40,
+        "completion_tokens": 512,
+        "total_tokens": 552,
+        "prompt_tokens_details": {
+          "cached_tokens": 33
+        }
+      },
+      "content": "```python\n\"\"\"\nLRU Cache with TTL Expiration, Thread Safety, and Example Usage.\n\nThis module provides a thread-safe LRU (Least Recently Used) cache that\nsupports TTL (Time-To-Live) expiration for cached entries.\n\"\"\"\n\nimport threading\nimport time\nfrom collections import OrderedDict\nfrom typing import Any, Optional, Hashable\n\n\nclass LRUCacheWithTTL:\n    \"\"\"\n    A thread-safe LRU cache with TTL (Time-To-Live) expiration.\n\n    Features:\n    - LRU eviction policy: least recently used items are evicted first.\n    - TTL expiration: each entry has an optional expiration time.\n    - Thread safety: all operations are protected by a reentrant lock.\n    - Automatic cleanup of expired entries on access.\n\n    Args:\n        max_size: Maximum number of entries in the cache.\n        default_ttl: Default TTL in seconds for entries without explicit TTL.\n                     If None, entries do not expire by default.\n    \"\"\"\n\n    def __init__(self, max_size: int = 128, default_ttl: Optional[float] = None):\n        if max_size <= 0:\n            raise ValueError(\"max_size must be a positive integer\")\n        if default_ttl is not None and default_ttl <= 0:\n            raise ValueError(\"default_ttl must be a positive number or None\")\n\n        self._max_size = max_size\n        self._default_ttl = default_ttl\n        self._lock = threading.RLock()\n        # OrderedDict maintains insertion order; we move items to end on access\n        self._cache: OrderedDict[Hashable, tuple] = OrderedDict()\n        # Each value is stored as (value, expiry_time) where expiry_time is None if no TTL\n\n    def get(self, key: Hashable, default: Any = None) -> Any:\n        \"\"\"\n        Retrieve a value from the cache.\n\n        If the key exists and has not expired, the value is returned and\n        the entry is marked as recently used. If the key does not exist or\n        has expired, the default value is returned.\n\n        Args:\n            key: The cache key.\n            default: Value to return if key is not found or expired.\n\n        Returns:\n            The cached value, or default if not found/expired.\n        \"\"\"\n        with self._lock:\n            if key not in self._cache"
+    },
+    {
+      "elapsed": 10.875,
+      "timings": {
+        "cache_n": 33,
+        "prompt_n": 7,
+        "prompt_ms": 153.1,
+        "prompt_per_token_ms": 21.871,
+        "prompt_per_second": 45.7,
+        "predicted_n": 512,
+        "predicted_ms": 10702.9,
+        "predicted_per_token_ms": 20.904,
+        "predicted_per_second": 47.8,
+        "draft_n": 444,
+        "draft_n_accepted": 342
+      },
+      "usage": {
+        "prompt_tokens": 40,
+        "completion_tokens": 512,
+        "total_tokens": 552,
+        "prompt_tokens_details": {
+          "cached_tokens": 33
+        }
+      },
+      "content": "```python\n\"\"\"\nLRU Cache with TTL Expiration, Thread Safety, and Example Usage.\n\nThis module provides a thread-safe LRU (Least Recently Used) cache that\nsupports TTL (Time-To-Live) expiration for cached entries.\n\"\"\"\n\nimport threading\nimport time\nfrom collections import OrderedDict\nfrom typing import Any, Optional, Hashable\n\n\nclass LRUCacheWithTTL:\n    \"\"\"\n    A thread-safe LRU cache with TTL (Time-To-Live) expiration.\n\n    Features:\n    - LRU eviction policy: least recently used items are evicted first.\n    - TTL expiration: each entry has an optional expiration time.\n    - Thread safety: all operations are protected by a reentrant lock.\n    - Automatic cleanup of expired entries on access.\n\n    Args:\n        max_size: Maximum number of entries in the cache.\n        default_ttl: Default TTL in seconds for entries without explicit TTL.\n                     If None, entries do not expire by default.\n    \"\"\"\n\n    def __init__(self, max_size: int = 128, default_ttl: Optional[float] = None):\n        if max_size <= 0:\n            raise ValueError(\"max_size must be a positive integer\")\n        if default_ttl is not None and default_ttl <= 0:\n            raise ValueError(\"default_ttl must be a positive number or None\")\n\n        self._max_size = max_size\n        self._default_ttl = default_ttl\n        self._cache: OrderedDict[Hashable, tuple[Any, Optional[float]]] = OrderedDict()\n        self._lock = threading.RLock()\n\n    def get(self, key: Hashable) -> Optional[Any]:\n        \"\"\"\n        Retrieve a value from the cache.\n\n        If the key exists and has not expired, the value is returned and\n        the entry is marked as recently used. If the key has expired, it is\n        removed and None is returned.\n\n        Args:\n            key: The cache key.\n\n        Returns:\n            The cached value if present and not expired, otherwise None.\n        \"\"\"\n        with self._lock:\n            if key not in self._cache:\n                return None\n\n            value, expiry = self._cache[key]\n\n            # Check if the entry has expired\n            if expiry is not None and time.time() > expiry:\n                del self._cache[key]\n                return None\n\n            #"
+    }
+  ]
+}

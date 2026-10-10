@@ -1,0 +1,32 @@
+{
+  "name": "publish-20261010-iq3s-warm",
+  "kind": "code",
+  "requested_tokens": 128,
+  "runs": [
+    {
+      "elapsed": 4.5939999999973224,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 40,
+        "prompt_ms": 1007.2,
+        "prompt_per_token_ms": 25.18,
+        "prompt_per_second": 39.7,
+        "predicted_n": 128,
+        "predicted_ms": 3531.3,
+        "predicted_per_token_ms": 27.588,
+        "predicted_per_second": 36.2,
+        "draft_n": 114,
+        "draft_n_accepted": 78
+      },
+      "usage": {
+        "prompt_tokens": 40,
+        "completion_tokens": 128,
+        "total_tokens": 168,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "content": "```python\nimport threading\nimport time\nfrom collections import OrderedDict\nfrom typing import Any, Optional, Tuple\n\n\nclass LRUCacheWithTTL:\n    \"\"\"\n    A thread-safe LRU cache with TTL (Time-To-Live) expiration.\n    \n    Features:\n    - LRU eviction: Least Recently Used items are evicted when capacity is reached.\n    - TTL expiration: Each entry has an optional expiration time. Expired entries\n      are treated as missing and cleaned up lazily or during access.\n    - Thread safety: All operations are protected by a reentrant lock.\n    \"\"\"\n\n"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "captured_utc": "2026-10-10T04:07:17.078027+00:00",
+  "note": "Snapshot during or near a benchmark, not a continuous average.",
+  "laptop": {
+    "physical_cores": 16,
+    "ram_available_kib": 11752612,
+    "os_version": "10.0.26200",
+    "committed_bytes": 43547570176,
+    "cpu": "AMD Ryzen 9 7945HX with Radeon Graphics        ",
+    "logical_threads": 32,
+    "os": "Microsoft Windows 11 Home",
+    "memory_modules": [
+      {
+        "Capacity": 17179869184,
+        "ConfiguredClockSpeed": 4800
+      },
+      {
+        "Capacity": 17179869184,
+        "ConfiguredClockSpeed": 4800
+      }
+    ],
+    "ram_total_kib": 32726536,
+    "commit_limit_bytes": 52292300800,
+    "gpu": [
+      {
+        "name": "NVIDIA GeForce RTX 4070 Laptop GPU",
+        "memory_total_mib": "8188",
+        "memory_used_mib": "7613",
+        "gpu_util_percent": "15",
+        "pstate": "P8",
+        "sm_clock_mhz": "210",
+        "memory_clock_mhz": "405"
+      }
+    ]
+  },
+  "desktop": {
+    "os": "Ubuntu 22.04.5 LTS",
+    "cpu": "AMD Ryzen 9 9950X 16-Core Processor",
+    "memory": {
+      "MemTotal": 32576200704,
+      "MemAvailable": 1063104512,
+      "SwapTotal": 2147479552,
+      "SwapFree": 0
+    },
+    "engine_memory": [
+      {
+        "VmRSS": 29183963136,
+        "VmSwap": 314564608
+      }
+    ],
+    "cpu_governor": "powersave",
+    "gpu": [
+      {
+        "name": "NVIDIA GeForce RTX 4080 SUPER",
+        "memory_total_mib": "16376",
+        "memory_used_mib": "15593",
+        "gpu_util_percent": "0",
+        "pstate": "P0",
+        "sm_clock_mhz": "2580",
+        "memory_clock_mhz": "11501"
+      }
+    ]
+  },
+  "configuration": {
+    "model": "IQ3_XXS",
+    "split": 42,
+    "context": 16384,
+    "pool_workers": 15,
+    "verify_tokens": 4,
+    "transport": "Direct",
+    "warmed_up": true
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "date_local": "2026-10-10",
+  "timezone": "Asia/Taipei",
+  "generated_utc": "2026-10-10T04:20:25.150371+00:00",
+  "method": {
+    "output_tokens": 512,
+    "measured_runs_per_workload": 3,
+    "extra_warmup_tokens_per_workload": 128,
+    "temperature": 0,
+    "thinking": false,
+    "stream": false,
+    "metric": "timings.predicted_per_second",
+    "aggregate": "median",
+    "prompt_cache": "Repeated prompts after warm-up; actual cache_n recorded per run.",
+    "isolation": "Each model retains its deployed context, layer split and memory budgets; not an isolated quantization-only comparison."
+  },
+  "prompts": {
+    "prose": "請用繁體中文寫一篇至少一千字的科普文章，解釋颱風如何形成，直接開始正文。",
+    "code": "Write a complete Python implementation of an LRU cache with TTL expiration, thread safety, and example usage. Explain the design after the code."
+  },
+  "engine": {
+    "upstream": "https://github.com/Niko1221/Strata",
+    "fork": "https://github.com/NTRYourWaifu/Strata/tree/two-pc",
+    "fork_commit": "7add08dbd076f7f5fe897c76769064332450fe61",
+    "version": "0.1.40.3",
+    "model_data_transport": "Direct LAN TCP",
+    "ssh_role": "Process management and localhost API forward"
+  },
+  "models": {
+    "IQ3_XXS": {
+      "split": {
+        "desktop_layers": 42,
+        "laptop_layers": 6
+      },
+      "context": 16384,
+      "cpu_expert_budget_gib": {
+        "desktop": 24,
+        "laptop": 7.25
+      },
+      "workloads": {
+        "prose": {
+          "median_decode_tok_s": 39.4,
+          "min_decode_tok_s": 38.6,
+          "max_decode_tok_s": 43.5,
+          "decode_tok_s_each": [
+            39.4,
+            38.6,
+            43.5
+          ],
+          "median_request_elapsed_s": 13.188,
+          "cached_prompt_tokens_each": [
+            26,
+            26,
+            26
+          ],
+          "mtp_acceptance_each": [
+            0.6131,
+            0.534,
+            0.6387
+          ],
+          "raw_file": "bench-publish-20261010-iq3xxs-prose.json"
+        },
+        "code": {
+          "median_decode_tok_s": 46.0,
+          "min_decode_tok_s": 44.0,
+          "max_decode_tok_s": 47.8,
+          "decode_tok_s_each": [
+            44.0,
+            46.0,
+            47.8
+          ],
+          "median_request_elapsed_s": 11.313,
+          "cached_prompt_tokens_each": [
+            33,
+            33,
+            33
+          ],
+          "mtp_acceptance_each": [
+            0.75,
+            0.7374,
+            0.7703
+          ],
+          "raw_file": "bench-publish-20261010-iq3xxs-code.json"
+        }
+      },
+      "hardware_snapshot_file": "hardware-publish-20261010-iq3xxs.json"
+    },
+    "IQ3_S": {
+      "split": {
+        "desktop_layers": 36,
+        "laptop_layers": 12
+      },
+      "context": 8192,
+      "cpu_expert_budget_gib": {
+        "desktop": 24.5,
+        "laptop": 8.25
+      },
+      "workloads": {
+        "prose": {
+          "median_decode_tok_s": 37.4,
+          "min_decode_tok_s": 36.0,
+          "max_decode_tok_s": 41.4,
+          "decode_tok_s_each": [
+            41.4,
+            36.0,
+            37.4
+          ],
+          "median_request_elapsed_s": 13.891,
+          "cached_prompt_tokens_each": [
+            26,
+            26,
+            26
+          ],
+          "mtp_acceptance_each": [
+            0.5938,
+            0.6325,
+            0.606
+          ],
+          "raw_file": "bench-publish-20261010-iq3s-prose.json"
+        },
+        "code": {
+          "median_decode_tok_s": 49.6,
+          "min_decode_tok_s": 47.3,
+          "max_decode_tok_s": 50.3,
+          "decode_tok_s_each": [
+            47.3,
+            49.6,
+            50.3
+          ],
+          "median_request_elapsed_s": 10.516,
+          "cached_prompt_tokens_each": [
+            33,
+            33,
+            33
+          ],
+          "mtp_acceptance_each": [
+            0.7977,
+            0.7968,
+            0.7775
+          ],
+          "raw_file": "bench-publish-20261010-iq3s-code.json"
+        }
+      },
+      "hardware_snapshot_file": "hardware-publish-20261010-iq3s.json"
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "name": "publish-20261010-iq3s",
+  "kind": "code",
+  "requested_tokens": 512,
+  "runs": [
+    {
+      "elapsed": 10.98399999999674,
+      "timings": {
+        "cache_n": 33,
+        "prompt_n": 7,
+        "prompt_ms": 133.0,
+        "prompt_per_token_ms": 19.0,
+        "prompt_per_second": 52.6,
+        "predicted_n": 512,
+        "predicted_ms": 10820.0,
+        "predicted_per_token_ms": 21.133,
+        "predicted_per_second": 47.3,
+        "draft_n": 435,
+        "draft_n_accepted": 347
+      },
+      "usage": {
+        "prompt_tokens": 40,
+        "completion_tokens": 512,
+        "total_tokens": 552,
+        "prompt_tokens_details": {
+          "cached_tokens": 33
+        }
+      },
+      "content": "```python\nimport threading\nimport time\nfrom collections import OrderedDict\nfrom typing import Any, Optional, Tuple\n\n\nclass LRUCacheWithTTL:\n    \"\"\"\n    A thread-safe LRU cache with TTL (Time-To-Live) expiration.\n    \n    Features:\n    - LRU eviction policy: least recently used items are evicted when capacity is reached.\n    - TTL expiration: each entry has an optional expiration time; expired entries are\n      treated as missing and removed lazily on access.\n    - Thread safety: all operations are protected by a reentrant lock.\n    \"\"\"\n\n    def __init__(self, capacity: int, default_ttl: Optional[float] = None):\n        \"\"\"\n        Initialize the LRU cache with TTL.\n\n        Args:\n            capacity: Maximum number of items the cache can hold.\n            default_ttl: Default time-to-live in seconds for entries.\n                         If None, entries do not expire by default.\n        \"\"\"\n        if capacity <= 0:\n            raise ValueError(\"Capacity must be a positive integer.\")\n        \n        self._capacity = capacity\n        self._default_ttl = default_ttl\n        self._cache: OrderedDict[Any, Tuple[Any, Optional[float]]] = OrderedDict()\n        self._lock = threading.RLock()\n\n    def get(self, key: Any, default: Any = None) -> Any:\n        \"\"\"\n        Retrieve a value from the cache.\n\n        Args:\n            key: The key to look up.\n            default: Value to return if the key is not found or expired.\n\n        Returns:\n            The cached value if present and not expired, otherwise the default value.\n        \"\"\"\n        with self._lock:\n            if key not in self._cache:\n                return default\n\n            value, expiry_time = self._cache[key]\n\n            # Check if the entry has expired\n            if expiry_time is not None and time.time() > expiry_time:\n                # Remove the expired entry\n                del self._cache[key]\n                return default\n\n            # Move the accessed item to the end (most recently used)\n            self._cache.move_to_end(key)\n            return value\n\n    def put(self, key: Any, value: Any, ttl: Optional[float] = None) -> None:\n        \"\"\"\n        Insert or update a value in the cache.\n\n        Args:\n            key: The key to store"
+    },
+    {
+      "elapsed": 10.51600000000326,
+      "timings": {
+        "cache_n": 33,
+        "prompt_n": 7,
+        "prompt_ms": 147.4,
+        "prompt_per_token_ms": 21.057,
+        "prompt_per_second": 47.5,
+        "predicted_n": 512,
+        "predicted_ms": 10326.7,
+        "predicted_per_token_ms": 20.169,
+        "predicted_per_second": 49.6,
+        "draft_n": 433,
+        "draft_n_accepted": 345
+      },
+      "usage": {
+        "prompt_tokens": 40,
+        "completion_tokens": 512,
+        "total_tokens": 552,
+        "prompt_tokens_details": {
+          "cached_tokens": 33
+        }
+      },
+      "content": "```python\nimport threading\nimport time\nfrom collections import OrderedDict\nfrom typing import Any, Optional, Tuple\n\n\nclass LRUCacheWithTTL:\n    \"\"\"\n    A thread-safe LRU cache with TTL (Time-To-Live) expiration.\n    \n    Features:\n    - Least Recently Used (LRU) eviction policy\n    - Per-entry TTL (Time-To-Live) expiration\n    - Thread-safe operations using a reentrant lock\n    - Automatic cleanup of expired entries on access\n    \"\"\"\n\n    def __init__(self, max_size: int, default_ttl: Optional[float] = None):\n        \"\"\"\n        Initialize the LRU cache with TTL.\n        \n        Args:\n            max_size: Maximum number of entries in the cache.\n            default_ttl: Default TTL in seconds for entries. If None, entries never expire.\n        \"\"\"\n        if max_size <= 0:\n            raise ValueError(\"max_size must be positive\")\n        \n        self._max_size = max_size\n        self._default_ttl = default_ttl\n        self._cache: OrderedDict[Any, Tuple[Any, Optional[float]]] = OrderedDict()\n        self._lock = threading.RLock()\n\n    def get(self, key: Any) -> Optional[Any]:\n        \"\"\"\n        Retrieve a value from the cache.\n        \n        Args:\n            key: The key to look up.\n            \n        Returns:\n            The cached value if present and not expired, None otherwise.\n        \"\"\"\n        with self._lock:\n            if key not in self._cache:\n                return None\n            \n            value, expiry_time = self._cache[key]\n            \n            # Check if the entry has expired\n            if expiry_time is not None and time.time() > expiry_time:\n                # Remove expired entry\n                del self._cache[key]\n                return None\n            \n            # Move to end (most recently used)\n            self._cache.move_to_end(key)\n            return value\n\n    def put(self, key: Any, value: Any, ttl: Optional[float] = None) -> None:\n        \"\"\"\n        Insert or update a value in the cache.\n        \n        Args:\n            key: The key to store.\n            value: The value to store.\n            ttl: TTL in seconds for this entry. If None, uses default_ttl.\n                 If both are None, the entry never expires.\n        \"\"\"\n        with"
+    },
+    {
+      "elapsed": 10.375,
+      "timings": {
+        "cache_n": 33,
+        "prompt_n": 7,
+        "prompt_ms": 155.0,
+        "prompt_per_token_ms": 22.143,
+        "prompt_per_second": 45.2,
+        "predicted_n": 512,
+        "predicted_ms": 10183.9,
+        "predicted_per_token_ms": 19.89,
+        "predicted_per_second": 50.3,
+        "draft_n": 445,
+        "draft_n_accepted": 346
+      },
+      "usage": {
+        "prompt_tokens": 40,
+        "completion_tokens": 512,
+        "total_tokens": 552,
+        "prompt_tokens_details": {
+          "cached_tokens": 33
+        }
+      },
+      "content": "```python\nimport threading\nimport time\nfrom collections import OrderedDict\nfrom typing import Any, Optional, Tuple\n\n\nclass LRUCacheWithTTL:\n    \"\"\"\n    A thread-safe LRU cache with TTL (Time-To-Live) expiration.\n    \n    Features:\n    - LRU eviction policy: least recently used items are evicted when capacity is reached.\n    - TTL expiration: each entry has an optional expiration time; expired entries are\n      treated as missing and removed lazily on access.\n    - Thread safety: all operations are protected by a reentrant lock.\n    \"\"\"\n\n    def __init__(self, capacity: int, default_ttl: Optional[float] = None):\n        \"\"\"\n        Initialize the LRU cache with TTL.\n\n        Args:\n            capacity: Maximum number of items the cache can hold.\n            default_ttl: Default time-to-live in seconds for entries.\n                         If None, entries do not expire by default.\n        \"\"\"\n        if capacity <= 0:\n            raise ValueError(\"Capacity must be a positive integer.\")\n        \n        self._capacity = capacity\n        self._default_ttl = default_ttl\n        self._cache: OrderedDict[Any, Tuple[Any, Optional[float]]] = OrderedDict()\n        # Value stored: (value, expiration_time) where expiration_time is None if no TTL\n        self._lock = threading.RLock()\n\n    def get(self, key: Any, default: Any = None) -> Any:\n        \"\"\"\n        Retrieve a value from the cache.\n\n        Args:\n            key: The key to look up.\n            default: Value to return if key is not found or expired.\n\n        Returns:\n            The cached value if present and not expired, otherwise the default.\n        \"\"\"\n        with self._lock:\n            if key not in self._cache:\n                return default\n            \n            value, expiration_time = self._cache[key]\n            \n            # Check if the entry has expired\n            if expiration_time is not None and time.time() > expiration_time:\n                # Remove the expired entry\n                del self._cache[key]\n                return default\n            \n            # Move the accessed item to the end (most recently used)\n            self._cache.move_to_end(key)\n            return value\n\n    def put(self, key: Any, value: Any, ttl: Optional[float] = None) -> None:\n        \"\"\"\n        Insert or"
+    }
+  ]
+}

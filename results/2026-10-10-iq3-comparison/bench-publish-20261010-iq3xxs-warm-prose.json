@@ -1,0 +1,32 @@
+{
+  "name": "publish-20261010-iq3xxs-warm",
+  "kind": "prose",
+  "requested_tokens": 128,
+  "runs": [
+    {
+      "elapsed": 5.797000000005937,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 33,
+        "prompt_ms": 1089.3,
+        "prompt_per_token_ms": 33.009,
+        "prompt_per_second": 30.3,
+        "predicted_n": 128,
+        "predicted_ms": 4629.9,
+        "predicted_per_token_ms": 36.171,
+        "predicted_per_second": 27.6,
+        "draft_n": 88,
+        "draft_n_accepted": 44
+      },
+      "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 128,
+        "total_tokens": 161,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "content": "颱風，這個在夏秋季節頻繁造訪亞洲沿海地區的自然現象，往往伴隨著狂風暴雨，給人類社會帶來巨大的挑戰與破壞。然而，颱風並非憑空出現的怪物，而是大自然能量釋放的一種極致表現。要理解颱風如何形成，我們必須深入大氣物理學的領域，從海洋、大氣以及地球自轉等多個維度，剖析這股龐大氣旋的誕生過程。\n\n颱風的形成，首先依賴於一個關鍵的「燃料庫」——溫暖的海洋。在熱帶地區，海水溫度通常較高，但並非所有溫暖的海水都能孕育"
+    }
+  ]
+}

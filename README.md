@@ -1,47 +1,32 @@
-# Strata 本機部署與雙機實驗成果
+# Strata 雙機本地模型：配置、測速與重現資料
 
-2026-10-10 工作區快照：保存 Windows 筆電與 Ubuntu 桌機的配置範例、建置工具、短測結果，以及後續雙機分層的準備原始碼。
+2026-10-10 更新：兩機 CPU＋GPU 分層已完成推理驗證，保留 IQ3_XXS、IQ3_S。桌機 Ryzen 9 9950X／RTX 4080 SUPER 16GB／32GB RAM；筆電 Ryzen 9 7945HX／RTX 4070 Laptop 8GB／32GB RAM。
 
-## 已驗證成果
+Measured on Ubuntu + Windows with Strata v0.1.40.3 and the NTR two-PC extension. These are warmed, repeated-prompt benchmarks of deployed configurations, not upstream performance claims.
 
-硬體：桌機 Ryzen 9 9950X、RTX 4080 SUPER 16GB、32GB RAM；筆電 Ryzen 9 7945HX、RTX 4070 Laptop 8GB、32GB RAM。
+## 最新測速
 
-| 配置 | 工作負載 | 生成速度 | 測量限制 |
-| --- | --- | ---: | --- |
-| llama.cpp RPC 原配置 | 數字，96 tokens | 2.747 tok/s | 一次測量 |
-| RPC 輸出層留在桌機 GPU | 相同數字，96 tokens | 6.485 tok/s | 一次測量 |
-| RPC＋GPU 非專家運算＋3GiB MoE 快取 | 相同數字，96 tokens | 中位數 24.053 tok/s | 三次測量，提示快取與專家快取狀態見 JSON |
-| Strata Q2_0，專家由 SSD 映射 | 中文，128 tokens | 18.5 tok/s | 一次短測 |
-| Strata Q2_0，GPU 未持有的專家常駐 RAM＋MTP | 相同中文，128 tokens | 56.0 tok/s | 一次短測；生成 2.284 秒，整次 2.72 秒 |
-| 後續硬體調整的 Q2 短測 | 中文，128 tokens | 63.6 tok/s | 一次短測；此快照沒有完整保存該輪設定，不能據此判定哪項調整造成提升 |
+每個負載三次、每次實際生成 512 tokens；temperature 0、thinking off。速度取引擎 `predicted_per_second`，不含讀題。暖機與快取狀態、分層／上下文差異已在報告明列。
 
-不同提示、輸出長度、快取狀態的數值不作直接倍率比較。Strata 的 56.0 與 63.6 都是短測結果，不是長時間平均，也不代表 IQ3 模型的速度。`results/` 保留原始 timings、usage 與合成提示的輸出。
+| 模型 | 工作負載 | 中位數 tok/s | 三次範圍 tok/s | 請求耗時中位數 |
+|---|---|---:|---:|---:|
+| IQ3_XXS | 繁體中文說明 | **39.4** | 38.6–43.5 | 13.19 秒 |
+| IQ3_XXS | 英文程式碼 | **46.0** | 44.0–47.8 | 11.31 秒 |
+| IQ3_S | 繁體中文說明 | **37.4** | 36.0–41.4 | 13.89 秒 |
+| IQ3_S | 英文程式碼 | **49.6** | 47.3–50.3 | 10.52 秒 |
 
-## 快照當下的狀態
+- [完整配置、原理、測試方法與限制](docs/IQ3-TWO-PC-BENCHMARK-2026-10-10.zh-TW.md)
+- [每次原始 timings、usage、合成輸出與硬體快照](results/2026-10-10-iq3-comparison/)
+- [結構化測速摘要](results/2026-10-10-iq3-comparison/summary.json)
+- [推理參數範例](config-templates/)、[合成測速與暖機工具](scripts/)
+- [原始來源快照與授權](sources/strata-two-pc/)
 
-目前選擇檔顯示 **IQ3_XXS / IQ3_S 雙機版本正在準備**；Q2 已在後續工作中移除。前面的 Q2 成果是歷史驗證結果，並不表示現在仍能直接啟動 Q2。
+## 使用項目
 
-雙機準備程式碼來自 [NTRYourWaifu/Strata](https://github.com/NTRYourWaifu/Strata)，封存目錄參考 `7add08d`。原始 Strata 為 [Niko1221/Strata](https://github.com/Niko1221/Strata)。此儲存庫保留當下準備好的來源副本與授權，不宣稱此快照的 Ubuntu＋Windows 雙機版本已完成推論驗證。上游指南中的效能數字屬於上游作者的不同硬體。
+核心：[Niko1221/Strata](https://github.com/Niko1221/Strata)。雙機分層：[NTRYourWaifu/Strata two-pc](https://github.com/NTRYourWaifu/Strata/tree/two-pc)，固定 commit `7add08dbd076f7f5fe897c76769064332450fe61`。模型來源：[ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF](https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF)。第三方授權保留在來源快照。
 
-## 內容
+模型分層資料走 LAN TCP 直連，桌機有線、筆電 Wi-Fi；SSH 只負責管理與 API 本機轉接。桌機／筆電 IQ3_XXS 為 42／6 層、16K 上下文；IQ3_S 為 36／12 層、8K 上下文。兩機各 16 個參與執行緒，INT8 KV、4-token MTP 驗證，自適應 GPU 專家快取與 CPU 專家運算。
 
-- `scripts/`：啟停、SSH、短測、建置、模型下載與 pack 準備腳本。
-- `config-templates/`：歷史 Q2 配置及當下 IQ3 準備狀態，已將電腦名稱、區網 IP 和使用者路徑改成佔位符。
-- `results/`：本工作區保存的測量 JSON；帶 `network-transition`、`compile-overlap` 的檔案屬於條件受干擾的紀錄。
-- `sources/strata-two-pc/`：準備好的雙機原始碼及第三方依賴来源。授權檔保留在原路徑。
-- `docs/`：研究、歷史部署說明與上游雙機指南。
-- `PROVENANCE.json`、`SNAPSHOT-SHA256.json`：來源說明與檔案完整性清單。
+本次保留日常環境與原電源／系統設定。桌機仍有記憶體壓力及 swap，詳見快照；不宣稱完全零換頁、固定 60 tok/s 或長時間穩定性。桌機保存完整 GGUF，筆電稀疏檔只包含其可分配的層；所有模型專家仍完整保留。
 
-不包含模型權重、MTP runtime 檔案、編譯好的 GPU 程式、Python 虛擬環境、SSH 私鑰、API key、程序 PID 或私人聊天紀錄。
-
-## 使用前
-
-這是成果快照，`scripts/` 與 `config-templates/` 的 `REMOTE_USER`、`DESKTOP_LAN_IP`、`DESKTOP_HOST_KEY_ALIAS` 等佔位符需要自行替換；來源與建置工具的位置也要符合你的電腦。金鑰需另外建立。模型依其原始授權自行下載，不由此儲存庫分發。
-
-短測工具可使用既有的 OpenAI 相容服務：
-
-```powershell
-python scripts/bench-speed.py example --kind prose --tokens 128 --runs 1 --key-file path/to/local-api-key.txt
-```
-
-程式預設讀取 `http://127.0.0.1:8080`。測量生成速度使用引擎的 `predicted_per_second`，不把讀題時間算入。
+此次分享只保留測速、硬體資料、推理參數與通用測試工具；電腦安全配置、部署管理腳本、實際 IP、帳號、金鑰與私人聊天均不納入。原始上游來源快照保留作來源參考。以前的 Q2／llama.cpp 測量保留為[歷史快照](docs/HISTORICAL-SNAPSHOT-20261010.md)，不能與本表不同條件直接比較。
