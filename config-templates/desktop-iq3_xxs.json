@@ -1,7 +1,8 @@
 {
   "model": "qwen3.8-flash-next-iq3_xxs",
+  "device_role": "desktop",
   "inference_parameters": {
-    "resident-budget-gib": "24",
+    "resident-budget-gib": "20.75",
     "expert-cache": "auto",
     "vram-reserve-mib": "800",
     "prefill": "512",
@@ -11,14 +12,15 @@
     "kv": "int8",
     "pcie-frac": "0",
     "suffix-draft": "0",
-    "net-split": "42",
-    "pool-workers": "15",
+    "net-split": "38",
+    "pool-workers": "8",
     "host-core": "first"
   },
   "resident_experts": true,
   "inference_environment": {
-    "STRATA_RESIDENT_HEADROOM_GIB": "1.25",
-    "STRATA_UNBUFFERED_LOAD": "0"
+    "STRATA_RESIDENT_HEADROOM_GIB": "2.5",
+    "STRATA_UNBUFFERED_LOAD": "0",
+    "STRATA_PREFILL_CPU_SHARE": "0"
   },
-  "note": "Inference parameters only; not a runnable deployment or security configuration."
+  "note": "Validated inference parameters only; endpoints, accounts, credentials and access rules omitted. This is not a runnable deployment configuration."
 }

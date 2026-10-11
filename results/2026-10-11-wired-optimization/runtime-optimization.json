@@ -1,0 +1,2758 @@
+{
+  "calibration_version": "wired-runtime-v1",
+  "calibrated_utc": "2026-10-10T12:14:34.841138+00:00",
+  "tokens": 256,
+  "runs_per_workload": 2,
+  "warm_excluded_tokens": 128,
+  "models": {
+    "IQ3_S": {
+      "candidates": [
+        {
+          "split": 36,
+          "desktop_cpu_budget_gib": 22.5,
+          "laptop_cpu_budget_gib": 4.5,
+          "desktop_pool_workers": 15,
+          "laptop_pool_workers": 15,
+          "prefill_chunk": 512,
+          "desktop_reserve_mib": 800,
+          "laptop_reserve_mib": 800,
+          "file_release": 0,
+          "spec_min_p": 0,
+          "model": "IQ3_S",
+          "label": "baseline",
+          "pcie_frac": 0,
+          "calibration_version": "wired-runtime-v1",
+          "workloads": {
+            "prose": {
+              "median_tok_s": 37.900000000000006,
+              "runs": [
+                {
+                  "timings": {
+                    "cache_n": 26,
+                    "prompt_n": 7,
+                    "prompt_ms": 99.3,
+                    "prompt_per_token_ms": 14.186,
+                    "prompt_per_second": 70.5,
+                    "predicted_n": 256,
+                    "predicted_ms": 6715.2,
+                    "predicted_per_token_ms": 26.231,
+                    "predicted_per_second": 38.1,
+                    "draft_n": 411,
+                    "draft_n_accepted": 121
+                  },
+                  "completion_tokens": 256
+                },
+                {
+                  "timings": {
+                    "cache_n": 26,
+                    "prompt_n": 7,
+                    "prompt_ms": 178.1,
+                    "prompt_per_token_ms": 25.443,
+                    "prompt_per_second": 39.3,
+                    "predicted_n": 256,
+                    "predicted_ms": 6792.2,
+                    "predicted_per_token_ms": 26.532,
+                    "predicted_per_second": 37.7,
+                    "draft_n": 423,
+                    "draft_n_accepted": 116
+                  },
+                  "completion_tokens": 256
+                }
+              ]
+            },
+            "code": {
+              "median_tok_s": 52.95,
+              "runs": [
+                {
+                  "timings": {
+                    "cache_n": 33,
+                    "prompt_n": 7,
+                    "prompt_ms": 104.4,
+                    "prompt_per_token_ms": 14.914,
+                    "prompt_per_second": 67.0,
+                    "predicted_n": 256,
+                    "predicted_ms": 4981.9,
+                    "predicted_per_token_ms": 19.461,
+                    "predicted_per_second": 51.4,
+                    "draft_n": 252,
+                    "draft_n_accepted": 171
+                  },
+                  "completion_tokens": 256
+                },
+                {
+                  "timings": {
+                    "cache_n": 33,
+                    "prompt_n": 7,
+                    "prompt_ms": 121.9,
+                    "prompt_per_token_ms": 17.414,
+                    "prompt_per_second": 57.4,
+                    "predicted_n": 256,
+                    "predicted_ms": 4693.1,
+                    "predicted_per_token_ms": 18.332,
+                    "predicted_per_second": 54.5,
+                    "draft_n": 270,
+                    "draft_n_accepted": 165
+                  },
+                  "completion_tokens": 256
+                }
+              ]
+            }
+          },
+          "requests": [
+            {
+              "ram_blobs": 17227,
+              "file_blobs": 1268,
+              "file_mb": 741.2,
+              "drafts_offered": 411,
+              "drafts_accepted": 121,
+              "pcie_share": 0.0
+            },
+            {
+              "ram_blobs": 16417,
+              "file_blobs": 1122,
+              "file_mb": 544.0,
+              "drafts_offered": 225,
+              "drafts_accepted": 52,
+              "pcie_share": 0.0
+            },
+            {
+              "ram_blobs": 9412,
+              "file_blobs": 272,
+              "file_mb": 100.2,
+              "drafts_offered": 66,
+              "drafts_accepted": 43,
+              "pcie_share": 0.0
+            },
+            {
+              "ram_blobs": 16842,
+              "file_blobs": 1188,
+              "file_mb": 408.5,
+              "drafts_offered": 105,
+              "drafts_accepted": 28,
+              "pcie_share": 0.0
+            }
+          ],
+          "resources_before": {
+            "desktop": {
+              "available_gib": 3.0443191528320312,
+              "engine_reclaim_ram_gib": 24.150875091552734,
+              "engine_swap_mib": 350.09765625,
+              "file_blobs": 1790,
+              "file_mb": 11549.6,
+              "resident_gib": 22.5
+            },
+            "laptop": {
+              "available_gib": 8.738792419433594,
+              "commit_available_gib": 3.5279579162597656,
+              "worker_reclaim_ram_gib": 9.265506744384766,
+              "worker_reclaim_commit_gib": 15.1014404296875,
+              "worker_working_set_gib": 9.265506744384766,
+              "file_stats_available": false,
+              "file_blobs": null,
+              "file_mb": null,
+              "full_resident_mode": true
+            }
+          },
+          "resources_after": {
+            "desktop": {
+              "available_gib": 3.1425514221191406,
+              "engine_reclaim_ram_gib": 19.57464599609375,
+              "engine_swap_mib": 464.0703125,
+              "file_blobs": 9534,
+              "file_mb": 15429.7,
+              "resident_gib": 22.5
+            },
+            "laptop": {
+              "available_gib": 6.946414947509766,
+              "commit_available_gib": 3.9001083374023438,
+              "worker_reclaim_ram_gib": 11.427780151367188,
+              "worker_reclaim_commit_gib": 15.101856231689453,
+              "worker_working_set_gib": 11.427780151367188,
+              "file_stats_available": false,
+              "file_blobs": null,
+              "file_mb": null,
+              "full_resident_mode": true
+            }
+          },
+          "min_headroom_gib": {
+            "desktop_ram": 2.968181610107422,
+            "laptop_ram": 6.946414947509766,
+            "laptop_commit": 3.5040359497070312
+          },
+          "desktop_physical_read_mib": 2970.953125,
+          "score_tok_s": 44.797377155364806,
+          "eligible": true,
+          "laptop_expert_resident_gib": 4.5,
+          "laptop_expert_complement_gib": 8.02
+        },
+        {
+          "split": 36,
+          "desktop_cpu_budget_gib": 22.5,
+          "laptop_cpu_budget_gib": 4.5,
+          "desktop_pool_workers": 15,
+          "laptop_pool_workers": 15,
+          "prefill_chunk": 512,
+          "desktop_reserve_mib": 800,
+          "laptop_reserve_mib": 800,
+          "file_release": 1,
+          "spec_min_p": 0,
+          "model": "IQ3_S",
+          "label": "alternate",
+          "pcie_frac": 1,
+          "calibration_version": "wired-runtime-v1",
+          "workloads": {
+            "prose": {
+              "median_tok_s": 35.5,
+              "runs": [
+                {
+                  "timings": {
+                    "cache_n": 26,
+                    "prompt_n": 7,
+                    "prompt_ms": 121.0,
+                    "prompt_per_token_ms": 17.286,
+                    "prompt_per_second": 57.9,
+                    "predicted_n": 256,
+                    "predicted_ms": 7438.1,
+                    "predicted_per_token_ms": 29.055,
+                    "predicted_per_second": 34.4,
+                    "draft_n": 402,
+                    "draft_n_accepted": 123
+                  },
+                  "completion_tokens": 256
+                },
+                {
+                  "timings": {
+                    "cache_n": 26,
+                    "prompt_n": 7,
+                    "prompt_ms": 186.3,
+                    "prompt_per_token_ms": 26.614,
+                    "prompt_per_second": 37.6,
+                    "predicted_n": 256,
+                    "predicted_ms": 6996.3,
+                    "predicted_per_token_ms": 27.329,
+                    "predicted_per_second": 36.6,
+                    "draft_n": 396,
+                    "draft_n_accepted": 124
+                  },
+                  "completion_tokens": 256
+                }
+              ]
+            },
+            "code": {
+              "median_tok_s": 43.05,
+              "runs": [
+                {
+                  "timings": {
+                    "cache_n": 33,
+                    "prompt_n": 7,
+                    "prompt_ms": 157.9,
+                    "prompt_per_token_ms": 22.557,
+                    "prompt_per_second": 44.3,
+                    "predicted_n": 256,
+                    "predicted_ms": 6087.8,
+                    "predicted_per_token_ms": 23.78,
+                    "predicted_per_second": 42.1,
+                    "draft_n": 264,
+                    "draft_n_accepted": 169
+                  },
+                  "completion_tokens": 256
+                },
+                {
+                  "timings": {
+                    "cache_n": 33,
+                    "prompt_n": 7,
+                    "prompt_ms": 147.3,
+                    "prompt_per_token_ms": 21.043,
+                    "prompt_per_second": 47.5,
+                    "predicted_n": 256,
+                    "predicted_ms": 5812.7,
+                    "predicted_per_token_ms": 22.706,
+                    "predicted_per_second": 44.0,
+                    "draft_n": 249,
+                    "draft_n_accepted": 172
+                  },
+                  "completion_tokens": 256
+                }
+              ]
+            }
+          },
+          "requests": [
+            {
+              "ram_blobs": 16542,
+              "file_blobs": 1192,
+              "file_mb": 746.9,
+              "drafts_offered": 402,
+              "drafts_accepted": 123,
+              "pcie_share": 0.085
+            },
+            {
+              "ram_blobs": 15136,
+              "file_blobs": 1063,
+              "file_mb": 499.5,
+              "drafts_offered": 213,
+              "drafts_accepted": 56,
+              "pcie_share": 0.162
+            },
+            {
+              "ram_blobs": 9358,
+              "file_blobs": 304,
+              "file_mb": 107.7,
+              "drafts_offered": 66,
+              "drafts_accepted": 41,
+              "pcie_share": 0.403
+            },
+            {
+              "ram_blobs": 17028,
+              "file_blobs": 1225,
+              "file_mb": 420.1,
+              "drafts_offered": 105,
+              "drafts_accepted": 29,
+              "pcie_share": 0.432
+            }
+          ],
+          "resources_before": {
+            "desktop": {
+              "available_gib": 3.010517120361328,
+              "engine_reclaim_ram_gib": 7.542030334472656,
+              "engine_swap_mib": 349.859375,
+              "file_blobs": 1853,
+              "file_mb": 11562.1,
+              "resident_gib": 22.5
+            },
+            "laptop": {
+              "available_gib": 9.532707214355469,
+              "commit_available_gib": 3.6904029846191406,
+              "worker_reclaim_ram_gib": 7.918567657470703,
+              "worker_reclaim_commit_gib": 15.101539611816406,
+              "worker_working_set_gib": 7.918567657470703,
+              "file_stats_available": false,
+              "file_blobs": null,
+              "file_mb": null,
+              "full_resident_mode": true
+            }
+          },
+          "resources_after": {
+            "desktop": {
+              "available_gib": 2.9870872497558594,
+              "engine_reclaim_ram_gib": 13.02194595336914,
+              "engine_swap_mib": 306.22265625,
+              "file_blobs": 9185,
+              "file_mb": 15329.0,
+              "resident_gib": 22.5
+            },
+            "laptop": {
+              "available_gib": 9.53817367553711,
+              "commit_available_gib": 3.6508827209472656,
+              "worker_reclaim_ram_gib": 8.256820678710938,
+              "worker_reclaim_commit_gib": 15.101764678955078,
+              "worker_working_set_gib": 8.256820678710938,
+              "file_stats_available": false,
+              "file_blobs": null,
+              "file_mb": null,
+              "full_resident_mode": true
+            }
+          },
+          "min_headroom_gib": {
+            "desktop_ram": 2.9396286010742188,
+            "laptop_ram": 8.330093383789062,
+            "laptop_commit": 2.159961700439453
+          },
+          "desktop_physical_read_mib": 2662.6171875,
+          "score_tok_s": 39.09315796913828,
+          "eligible": true,
+          "laptop_expert_resident_gib": 4.5,
+          "laptop_expert_complement_gib": 8.02
+        },
+        {
+          "split": 36,
+          "desktop_cpu_budget_gib": 23.25,
+          "laptop_cpu_budget_gib": 5.75,
+          "desktop_pool_workers": 15,
+          "laptop_pool_workers": 15,
+          "prefill_chunk": 512,
+          "desktop_reserve_mib": 640,
+          "laptop_reserve_mib": 640,
+          "file_release": 1,
+          "spec_min_p": 0,
+          "model": "IQ3_S",
+          "label": "cpu-memory",
+          "pcie_frac": 0,
+          "calibration_version": "wired-runtime-v1",
+          "workloads": {
+            "prose": {
+              "median_tok_s": 42.45,
+              "runs": [
+                {
+                  "timings": {
+                    "cache_n": 26,
+                    "prompt_n": 7,
+                    "prompt_ms": 105.5,
+                    "prompt_per_token_ms": 15.071,
+                    "prompt_per_second": 66.4,
+                    "predicted_n": 256,
+                    "predicted_ms": 5939.0,
+                    "predicted_per_token_ms": 23.199,
+                    "predicted_per_second": 43.1,
+                    "draft_n": 408,
+                    "draft_n_accepted": 120
+                  },
+                  "completion_tokens": 256
+                },
+                {
+                  "timings": {
+                    "cache_n": 26,
+                    "prompt_n": 7,
+                    "prompt_ms": 136.2,
+                    "prompt_per_token_ms": 19.457,
+                    "prompt_per_second": 51.4,
+                    "predicted_n": 256,
+                    "predicted_ms": 6119.7,
+                    "predicted_per_token_ms": 23.905,
+                    "predicted_per_second": 41.8,
+                    "draft_n": 399,
+                    "draft_n_accepted": 124
+                  },
+                  "completion_tokens": 256
+                }
+              ]
+            },
+            "code": {
+              "median_tok_s": 55.349999999999994,
+              "runs": [
+                {
+                  "timings": {
+                    "cache_n": 33,
+                    "prompt_n": 7,
+                    "prompt_ms": 120.4,
+                    "prompt_per_token_ms": 17.2,
+                    "prompt_per_second": 58.1,
+                    "predicted_n": 256,
+                    "predicted_ms": 4993.0,
+                    "predicted_per_token_ms": 19.504,
+                    "predicted_per_second": 51.3,
+                    "draft_n": 270,
+                    "draft_n_accepted": 165
+                  },
+                  "completion_tokens": 256
+                },
+                {
+                  "timings": {
+                    "cache_n": 33,
+                    "prompt_n": 7,
+                    "prompt_ms": 120.7,
+                    "prompt_per_token_ms": 17.243,
+                    "prompt_per_second": 58.0,
+                    "predicted_n": 256,
+                    "predicted_ms": 4309.8,
+                    "predicted_per_token_ms": 16.835,
+                    "predicted_per_second": 59.4,
+                    "draft_n": 261,
+                    "draft_n_accepted": 171
+                  },
+                  "completion_tokens": 256
+                }
+              ]
+            }
+          },
+          "requests": [
+            {
+              "ram_blobs": 15927,
+              "file_blobs": 561,
+              "file_mb": 208.0,
+              "drafts_offered": 408,
+              "drafts_accepted": 120,
+              "pcie_share": 0.0
+            },
+            {
+              "ram_blobs": 16804,
+              "file_blobs": 654,
+              "file_mb": 106.5,
+              "drafts_offered": 219,
+              "drafts_accepted": 56,
+              "pcie_share": 0.0
+            },
+            {
+              "ram_blobs": 9528,
+              "file_blobs": 123,
+              "file_mb": 54.8,
+              "drafts_offered": 66,
+              "drafts_accepted": 43,
+              "pcie_share": 0.0
+            },
+            {
+              "ram_blobs": 16945,
+              "file_blobs": 750,
+              "file_mb": 212.5,
+              "drafts_offered": 105,
+              "drafts_accepted": 28,
+              "pcie_share": 0.0
+            }
+          ],
+          "resources_before": {
+            "desktop": {
+              "available_gib": 2.3213348388671875,
+              "engine_reclaim_ram_gib": 25.25,
+              "engine_swap_mib": 450.8515625,
+              "file_blobs": 1075,
+              "file_mb": 11284.2,
+              "resident_gib": 23.25
+            },
+            "laptop": {
+              "available_gib": 9.530967712402344,
+              "commit_available_gib": 2.3232460021972656,
+              "worker_reclaim_ram_gib": 8.846664428710938,
+              "worker_reclaim_commit_gib": 16.512466430664062,
+              "worker_working_set_gib": 8.846664428710938,
+              "file_stats_available": false,
+              "file_blobs": null,
+              "file_mb": null,
+              "full_resident_mode": true
+            }
+          },
+          "resources_after": {
+            "desktop": {
+              "available_gib": 2.2369956970214844,
+              "engine_reclaim_ram_gib": 25.25,
+              "engine_swap_mib": 284.625,
+              "file_blobs": 5106,
+              "file_mb": 12524.1,
+              "resident_gib": 23.25
+            },
+            "laptop": {
+              "available_gib": 9.094459533691406,
+              "commit_available_gib": 2.1205215454101562,
+              "worker_reclaim_ram_gib": 9.105697631835938,
+              "worker_reclaim_commit_gib": 16.51303482055664,
+              "worker_working_set_gib": 9.105697631835938,
+              "file_stats_available": false,
+              "file_blobs": null,
+              "file_mb": null,
+              "full_resident_mode": true
+            }
+          },
+          "min_headroom_gib": {
+            "desktop_ram": 2.2229080200195312,
+            "laptop_ram": 9.081565856933594,
+            "laptop_commit": 2.0417098999023438
+          },
+          "desktop_physical_read_mib": 1981.05859375,
+          "score_tok_s": 48.47275007671836,
+          "eligible": true,
+          "laptop_expert_resident_gib": 5.75,
+          "laptop_expert_complement_gib": 7.86
+        },
+        {
+          "split": 35,
+          "desktop_cpu_budget_gib": 22.5,
+          "laptop_cpu_budget_gib": 4.75,
+          "desktop_pool_workers": 15,
+          "laptop_pool_workers": 15,
+          "prefill_chunk": 512,
+          "desktop_reserve_mib": 640,
+          "laptop_reserve_mib": 640,
+          "file_release": 1,
+          "spec_min_p": 0,
+          "model": "IQ3_S",
+          "label": "cpu-split35",
+          "pcie_frac": 0,
+          "calibration_version": "wired-runtime-v1",
+          "workloads": {
+            "prose": {
+              "median_tok_s": 39.8,
+              "runs": [
+                {
+                  "timings": {
+                    "cache_n": 26,
+                    "prompt_n": 7,
+                    "prompt_ms": 129.5,
+                    "prompt_per_token_ms": 18.5,
+                    "prompt_per_second": 54.1,
+                    "predicted_n": 256,
+                    "predicted_ms": 6705.9,
+                    "predicted_per_token_ms": 26.195,
+                    "predicted_per_second": 38.2,
+                    "draft_n": 411,
+                    "draft_n_accepted": 120
+                  },
+                  "completion_tokens": 256
+                },
+                {
+                  "timings": {
+                    "cache_n": 26,
+                    "prompt_n": 7,
+                    "prompt_ms": 193.6,
+                    "prompt_per_token_ms": 27.657,
+                    "prompt_per_second": 36.2,
+                    "predicted_n": 256,
+                    "predicted_ms": 6176.7,
+                    "predicted_per_token_ms": 24.128,
+                    "predicted_per_second": 41.4,
+                    "draft_n": 414,
+                    "draft_n_accepted": 117
+                  },
+                  "completion_tokens": 256
+                }
+              ]
+            },
+            "code": {
+              "median_tok_s": 52.35,
+              "runs": [
+                {
+                  "timings": {
+                    "cache_n": 33,
+                    "prompt_n": 7,
+                    "prompt_ms": 122.1,
+                    "prompt_per_token_ms": 17.443,
+                    "prompt_per_second": 57.3,
+                    "predicted_n": 256,
+                    "predicted_ms": 5328.1,
+                    "predicted_per_token_ms": 20.813,
+                    "predicted_per_second": 48.0,
+                    "draft_n": 270,
+                    "draft_n_accepted": 165
+                  },
+                  "completion_tokens": 256
+                },
+                {
+                  "timings": {
+                    "cache_n": 33,
+                    "prompt_n": 7,
+                    "prompt_ms": 141.4,
+                    "prompt_per_token_ms": 20.2,
+                    "prompt_per_second": 49.5,
+                    "predicted_n": 256,
+                    "predicted_ms": 4511.1,
+                    "predicted_per_token_ms": 17.621,
+                    "predicted_per_second": 56.7,
+                    "draft_n": 267,
+                    "draft_n_accepted": 168
+                  },
+                  "completion_tokens": 256
+                }
+              ]
+            }
+          },
+          "requests": [
+            {
+              "ram_blobs": 15051,
+              "file_blobs": 315,
+              "file_mb": 104.5,
+              "drafts_offered": 411,
+              "drafts_accepted": 120,
+              "pcie_share": 0.0
+            },
+            {
+              "ram_blobs": 13812,
+              "file_blobs": 362,
+              "file_mb": 51.2,
+              "drafts_offered": 204,
+              "drafts_accepted": 60,
+              "pcie_share": 0.0
+            },
+            {
+              "ram_blobs": 8878,
+              "file_blobs": 85,
+              "file_mb": 30.0,
+              "drafts_offered": 66,
+              "drafts_accepted": 41,
+              "pcie_share": 0.0
+            },
+            {
+              "ram_blobs": 16503,
+              "file_blobs": 408,
+              "file_mb": 134.7,
+              "drafts_offered": 105,
+              "drafts_accepted": 29,
+              "pcie_share": 0.0
+            }
+          ],
+          "resources_before": {
+            "desktop": {
+              "available_gib": 3.3345680236816406,
+              "engine_reclaim_ram_gib": 17.984668731689453,
+              "engine_swap_mib": 614.96484375,
+              "file_blobs": 604,
+              "file_mb": 11200.4,
+              "resident_gib": 22.5
+            },
+            "laptop": {
+              "available_gib": 8.808517456054688,
+              "commit_available_gib": 2.0836334228515625,
+              "worker_reclaim_ram_gib": 8.386314392089844,
+              "worker_reclaim_commit_gib": 15.515819549560547,
+              "worker_working_set_gib": 8.386314392089844,
+              "file_stats_available": false,
+              "file_blobs": null,
+              "file_mb": null,
+              "full_resident_mode": true
+            }
+          },
+          "resources_after": {
+            "desktop": {
+              "available_gib": 2.9780197143554688,
+              "engine_reclaim_ram_gib": 22.047340393066406,
+              "engine_swap_mib": 310.4296875,
+              "file_blobs": 2719,
+              "file_mb": 11754.5,
+              "resident_gib": 22.5
+            },
+            "laptop": {
+              "available_gib": 8.34893798828125,
+              "commit_available_gib": 2.1471519470214844,
+              "worker_reclaim_ram_gib": 8.933605194091797,
+              "worker_reclaim_commit_gib": 15.515979766845703,
+              "worker_working_set_gib": 8.933605194091797,
+              "file_stats_available": false,
+              "file_blobs": null,
+              "file_mb": null,
+              "full_resident_mode": true
+            }
+          },
+          "min_headroom_gib": {
+            "desktop_ram": 2.9780197143554688,
+            "laptop_ram": 8.311347961425781,
+            "laptop_commit": 2.0461044311523438
+          },
+          "desktop_physical_read_mib": 1073.13671875,
+          "score_tok_s": 45.64570078331583,
+          "eligible": true,
+          "laptop_expert_resident_gib": 4.75,
+          "laptop_expert_complement_gib": 9.06
+        },
+        {
+          "split": 36,
+          "desktop_cpu_budget_gib": 23.25,
+          "laptop_cpu_budget_gib": 4.75,
+          "desktop_pool_workers": 15,
+          "laptop_pool_workers": 15,
+          "prefill_chunk": 512,
+          "desktop_reserve_mib": 640,
+          "laptop_reserve_mib": 640,
+          "file_release": 1,
+          "spec_min_p": 0,
+          "model": "IQ3_S",
+          "label": "cpu-memory-conservative",
+          "pcie_frac": 0,
+          "calibration_version": "wired-runtime-v1",
+          "workloads": {
+            "prose": {
+              "median_tok_s": 38.25,
+              "runs": [
+                {
+                  "timings": {
+                    "cache_n": 26,
+                    "prompt_n": 7,
+                    "prompt_ms": 110.0,
+                    "prompt_per_token_ms": 15.714,
+                    "prompt_per_second": 63.6,
+                    "predicted_n": 256,
+                    "predicted_ms": 6656.1,
+                    "predicted_per_token_ms": 26.0,
+                    "predicted_per_second": 38.5,
+                    "draft_n": 408,
+                    "draft_n_accepted": 120
+                  },
+                  "completion_tokens": 256
+                },
+                {
+                  "timings": {
+                    "cache_n": 26,
+                    "prompt_n": 7,
+                    "prompt_ms": 135.3,
+                    "prompt_per_token_ms": 19.329,
+                    "prompt_per_second": 51.7,
+                    "predicted_n": 256,
+                    "predicted_ms": 6741.9,
+                    "predicted_per_token_ms": 26.336,
+                    "predicted_per_second": 38.0,
+                    "draft_n": 399,
+                    "draft_n_accepted": 124
+                  },
+                  "completion_tokens": 256
+                }
+              ]
+            },
+            "code": {
+              "median_tok_s": 41.65,
+              "runs": [
+                {
+                  "timings": {
+                    "cache_n": 33,
+                    "prompt_n": 7,
+                    "prompt_ms": 122.6,
+                    "prompt_per_token_ms": 17.514,
+                    "prompt_per_second": 57.1,
+                    "predicted_n": 256,
+                    "predicted_ms": 9759.0,
+                    "predicted_per_token_ms": 38.121,
+                    "predicted_per_second": 26.2,
+                    "draft_n": 270,
+                    "draft_n_accepted": 165
+                  },
+                  "completion_tokens": 256
+                },
+                {
+                  "timings": {
+                    "cache_n": 33,
+                    "prompt_n": 7,
+                    "prompt_ms": 131.1,
+                    "prompt_per_token_ms": 18.729,
+                    "prompt_per_second": 53.4,
+                    "predicted_n": 256,
+                    "predicted_ms": 4485.2,
+                    "predicted_per_token_ms": 17.52,
+                    "predicted_per_second": 57.1,
+                    "draft_n": 261,
+                    "draft_n_accepted": 171
+                  },
+                  "completion_tokens": 256
+                }
+              ]
+            }
+          },
+          "requests": [
+            {
+              "output_tokens": 256,
+              "ram_blobs": 14790,
+              "file_blobs": 511,
+              "file_mb": 157.1,
+              "drafts_offered": 261,
+              "drafts_accepted": 171,
+              "pcie_share": 0.0
+            },
+            {
+              "output_tokens": 256,
+              "ram_blobs": 20141,
+              "file_blobs": 753,
+              "file_mb": 223.8,
+              "drafts_offered": 270,
+              "drafts_accepted": 165,
+              "pcie_share": 0.0
+            },
+            {
+              "output_tokens": 256,
+              "ram_blobs": 17799,
+              "file_blobs": 630,
+              "file_mb": 294.0,
+              "drafts_offered": 399,
+              "drafts_accepted": 124,
+              "pcie_share": 0.0
+            },
+            {
+              "output_tokens": 256,
+              "ram_blobs": 15927,
+              "file_blobs": 561,
+              "file_mb": 208.0,
+              "drafts_offered": 408,
+              "drafts_accepted": 120,
+              "pcie_share": 0.0
+            }
+          ],
+          "request_scope": "four-measured-256-token-requests",
+          "resources_before": {
+            "desktop": {
+              "available_gib": 2.40081787109375,
+              "engine_reclaim_ram_gib": 25.25,
+              "engine_swap_mib": 452.23046875,
+              "file_blobs": 1075,
+              "file_mb": 11284.2,
+              "resident_gib": 23.25
+            },
+            "laptop": {
+              "available_gib": 9.149005889892578,
+              "commit_available_gib": 4.284152984619141,
+              "worker_reclaim_ram_gib": 8.032291412353516,
+              "worker_reclaim_commit_gib": 15.506858825683594,
+              "worker_working_set_gib": 8.032291412353516,
+              "file_stats_available": false,
+              "file_blobs": null,
+              "file_mb": null,
+              "full_resident_mode": true
+            }
+          },
+          "resources_after": {
+            "desktop": {
+              "available_gib": 2.434375762939453,
+              "engine_reclaim_ram_gib": 25.207847595214844,
+              "engine_swap_mib": 497.55859375,
+              "file_blobs": 5106,
+              "file_mb": 12524.1,
+              "resident_gib": 23.25
+            },
+            "laptop": {
+              "available_gib": 8.85317611694336,
+              "commit_available_gib": 4.345462799072266,
+              "worker_reclaim_ram_gib": 8.422752380371094,
+              "worker_reclaim_commit_gib": 15.507598876953125,
+              "worker_working_set_gib": 8.422752380371094,
+              "file_stats_available": false,
+              "file_blobs": null,
+              "file_mb": null,
+              "full_resident_mode": true
+            }
+          },
+          "min_headroom_gib": {
+            "desktop_ram": 2.2547569274902344,
+            "laptop_ram": 8.837085723876953,
+            "laptop_commit": 4.270931243896484
+          },
+          "desktop_physical_read_mib": 1646.47265625,
+          "score_tok_s": 39.913813398371246,
+          "eligible": true,
+          "laptop_expert_resident_gib": 4.75,
+          "laptop_expert_complement_gib": 7.86
+        },
+        {
+          "split": 36,
+          "desktop_cpu_budget_gib": 23.25,
+          "laptop_cpu_budget_gib": 5.75,
+          "desktop_pool_workers": 15,
+          "laptop_pool_workers": 15,
+          "prefill_chunk": 512,
+          "desktop_reserve_mib": 640,
+          "laptop_reserve_mib": 640,
+          "file_release": 1,
+          "spec_min_p": 0.5,
+          "model": "IQ3_S",
+          "label": "mtp05-confirm",
+          "pcie_frac": 0,
+          "calibration_version": "wired-runtime-v1",
+          "workloads": {
+            "prose": {
+              "median_tok_s": 51.6,
+              "runs": [
+                {
+                  "timings": {
+                    "cache_n": 26,
+                    "prompt_n": 7,
+                    "prompt_ms": 97.0,
+                    "prompt_per_token_ms": 13.857,
+                    "prompt_per_second": 72.2,
+                    "predicted_n": 256,
+                    "predicted_ms": 5007.9,
+                    "predicted_per_token_ms": 19.562,
+                    "predicted_per_second": 51.1,
+                    "draft_n": 186,
+                    "draft_n_accepted": 104
+                  },
+                  "completion_tokens": 256
+                },
+                {
+                  "timings": {
+                    "cache_n": 26,
+                    "prompt_n": 7,
+                    "prompt_ms": 121.8,
+                    "prompt_per_token_ms": 17.4,
+                    "prompt_per_second": 57.5,
+                    "predicted_n": 256,
+                    "predicted_ms": 4918.2,
+                    "predicted_per_token_ms": 19.212,
+                    "predicted_per_second": 52.1,
+                    "draft_n": 188,
+                    "draft_n_accepted": 96
+                  },
+                  "completion_tokens": 256
+                }
+              ]
+            },
+            "code": {
+              "median_tok_s": 64.85,
+              "runs": [
+                {
+                  "timings": {
+                    "cache_n": 33,
+                    "prompt_n": 7,
+                    "prompt_ms": 93.8,
+                    "prompt_per_token_ms": 13.4,
+                    "prompt_per_second": 74.6,
+                    "predicted_n": 256,
+                    "predicted_ms": 4404.7,
+                    "predicted_per_token_ms": 17.206,
+                    "predicted_per_second": 58.1,
+                    "draft_n": 230,
+                    "draft_n_accepted": 168
+                  },
+                  "completion_tokens": 256
+                },
+                {
+                  "timings": {
+                    "cache_n": 33,
+                    "prompt_n": 7,
+                    "prompt_ms": 101.0,
+                    "prompt_per_token_ms": 14.429,
+                    "prompt_per_second": 69.3,
+                    "predicted_n": 256,
+                    "predicted_ms": 3574.6,
+                    "predicted_per_token_ms": 13.963,
+                    "predicted_per_second": 71.6,
+                    "draft_n": 221,
+                    "draft_n_accepted": 170
+                  },
+                  "completion_tokens": 256
+                }
+              ]
+            }
+          },
+          "requests": [
+            {
+              "output_tokens": 256,
+              "ram_blobs": 12673,
+              "file_blobs": 446,
+              "file_mb": 100.1,
+              "drafts_offered": 221,
+              "drafts_accepted": 170,
+              "pcie_share": 0.0
+            },
+            {
+              "output_tokens": 256,
+              "ram_blobs": 18909,
+              "file_blobs": 610,
+              "file_mb": 183.0,
+              "drafts_offered": 230,
+              "drafts_accepted": 168,
+              "pcie_share": 0.0
+            },
+            {
+              "output_tokens": 256,
+              "ram_blobs": 11703,
+              "file_blobs": 462,
+              "file_mb": 174.4,
+              "drafts_offered": 188,
+              "drafts_accepted": 96,
+              "pcie_share": 0.0
+            },
+            {
+              "output_tokens": 256,
+              "ram_blobs": 13802,
+              "file_blobs": 500,
+              "file_mb": 182.9,
+              "drafts_offered": 186,
+              "drafts_accepted": 104,
+              "pcie_share": 0.0
+            }
+          ],
+          "request_scope": "four-measured-256-token-requests",
+          "resources_before": {
+            "desktop": {
+              "available_gib": 2.9341697692871094,
+              "engine_reclaim_ram_gib": 25.091083526611328,
+              "engine_swap_mib": 1014.4140625,
+              "file_blobs": 12783,
+              "file_mb": 15150.9,
+              "resident_gib": 23.25
+            },
+            "laptop": {
+              "available_gib": 7.686557769775391,
+              "commit_available_gib": 2.9687423706054688,
+              "worker_reclaim_ram_gib": 9.225738525390625,
+              "worker_reclaim_commit_gib": 16.521678924560547,
+              "worker_working_set_gib": 9.225738525390625,
+              "file_stats_available": false,
+              "file_blobs": null,
+              "file_mb": null,
+              "full_resident_mode": true
+            }
+          },
+          "resources_after": {
+            "desktop": {
+              "available_gib": 2.9407958984375,
+              "engine_reclaim_ram_gib": 25.189105987548828,
+              "engine_swap_mib": 1016.2734375,
+              "file_blobs": 16314,
+              "file_mb": 16327.0,
+              "resident_gib": 23.25
+            },
+            "laptop": {
+              "available_gib": 7.688785552978516,
+              "commit_available_gib": 3.0678024291992188,
+              "worker_reclaim_ram_gib": 9.340557098388672,
+              "worker_reclaim_commit_gib": 16.521678924560547,
+              "worker_working_set_gib": 9.340557098388672,
+              "file_stats_available": false,
+              "file_blobs": null,
+              "file_mb": null,
+              "full_resident_mode": true
+            }
+          },
+          "min_headroom_gib": {
+            "desktop_ram": 2.9008026123046875,
+            "laptop_ram": 7.383277893066406,
+            "laptop_commit": 2.8489151000976562
+          },
+          "desktop_physical_read_mib": 926.1171875,
+          "score_tok_s": 57.84686681230021,
+          "eligible": true,
+          "laptop_expert_resident_gib": 5.75,
+          "laptop_expert_complement_gib": 7.86,
+          "io_cache_state": "after-mtp-abba-not-comparable-to-cold-loaded-baseline",
+          "memory_parent_settings": {
+            "split": 36,
+            "desktop_cpu_budget_gib": 23.25,
+            "laptop_cpu_budget_gib": 5.75,
+            "desktop_pool_workers": 15,
+            "laptop_pool_workers": 15,
+            "prefill_chunk": 512,
+            "desktop_reserve_mib": 640,
+            "laptop_reserve_mib": 640,
+            "file_release": 1
+          }
+        }
+      ],
+      "baseline": {
+        "split": 36,
+        "desktop_cpu_budget_gib": 22.5,
+        "laptop_cpu_budget_gib": 4.5,
+        "desktop_pool_workers": 15,
+        "laptop_pool_workers": 15,
+        "prefill_chunk": 512,
+        "desktop_reserve_mib": 800,
+        "laptop_reserve_mib": 800,
+        "file_release": 0,
+        "spec_min_p": 0,
+        "model": "IQ3_S",
+        "label": "baseline",
+        "pcie_frac": 0,
+        "calibration_version": "wired-runtime-v1",
+        "workloads": {
+          "prose": {
+            "median_tok_s": 37.900000000000006,
+            "runs": [
+              {
+                "timings": {
+                  "cache_n": 26,
+                  "prompt_n": 7,
+                  "prompt_ms": 99.3,
+                  "prompt_per_token_ms": 14.186,
+                  "prompt_per_second": 70.5,
+                  "predicted_n": 256,
+                  "predicted_ms": 6715.2,
+                  "predicted_per_token_ms": 26.231,
+                  "predicted_per_second": 38.1,
+                  "draft_n": 411,
+                  "draft_n_accepted": 121
+                },
+                "completion_tokens": 256
+              },
+              {
+                "timings": {
+                  "cache_n": 26,
+                  "prompt_n": 7,
+                  "prompt_ms": 178.1,
+                  "prompt_per_token_ms": 25.443,
+                  "prompt_per_second": 39.3,
+                  "predicted_n": 256,
+                  "predicted_ms": 6792.2,
+                  "predicted_per_token_ms": 26.532,
+                  "predicted_per_second": 37.7,
+                  "draft_n": 423,
+                  "draft_n_accepted": 116
+                },
+                "completion_tokens": 256
+              }
+            ]
+          },
+          "code": {
+            "median_tok_s": 52.95,
+            "runs": [
+              {
+                "timings": {
+                  "cache_n": 33,
+                  "prompt_n": 7,
+                  "prompt_ms": 104.4,
+                  "prompt_per_token_ms": 14.914,
+                  "prompt_per_second": 67.0,
+                  "predicted_n": 256,
+                  "predicted_ms": 4981.9,
+                  "predicted_per_token_ms": 19.461,
+                  "predicted_per_second": 51.4,
+                  "draft_n": 252,
+                  "draft_n_accepted": 171
+                },
+                "completion_tokens": 256
+              },
+              {
+                "timings": {
+                  "cache_n": 33,
+                  "prompt_n": 7,
+                  "prompt_ms": 121.9,
+                  "prompt_per_token_ms": 17.414,
+                  "prompt_per_second": 57.4,
+                  "predicted_n": 256,
+                  "predicted_ms": 4693.1,
+                  "predicted_per_token_ms": 18.332,
+                  "predicted_per_second": 54.5,
+                  "draft_n": 270,
+                  "draft_n_accepted": 165
+                },
+                "completion_tokens": 256
+              }
+            ]
+          }
+        },
+        "requests": [
+          {
+            "ram_blobs": 17227,
+            "file_blobs": 1268,
+            "file_mb": 741.2,
+            "drafts_offered": 411,
+            "drafts_accepted": 121,
+            "pcie_share": 0.0
+          },
+          {
+            "ram_blobs": 16417,
+            "file_blobs": 1122,
+            "file_mb": 544.0,
+            "drafts_offered": 225,
+            "drafts_accepted": 52,
+            "pcie_share": 0.0
+          },
+          {
+            "ram_blobs": 9412,
+            "file_blobs": 272,
+            "file_mb": 100.2,
+            "drafts_offered": 66,
+            "drafts_accepted": 43,
+            "pcie_share": 0.0
+          },
+          {
+            "ram_blobs": 16842,
+            "file_blobs": 1188,
+            "file_mb": 408.5,
+            "drafts_offered": 105,
+            "drafts_accepted": 28,
+            "pcie_share": 0.0
+          }
+        ],
+        "resources_before": {
+          "desktop": {
+            "available_gib": 3.0443191528320312,
+            "engine_reclaim_ram_gib": 24.150875091552734,
+            "engine_swap_mib": 350.09765625,
+            "file_blobs": 1790,
+            "file_mb": 11549.6,
+            "resident_gib": 22.5
+          },
+          "laptop": {
+            "available_gib": 8.738792419433594,
+            "commit_available_gib": 3.5279579162597656,
+            "worker_reclaim_ram_gib": 9.265506744384766,
+            "worker_reclaim_commit_gib": 15.1014404296875,
+            "worker_working_set_gib": 9.265506744384766,
+            "file_stats_available": false,
+            "file_blobs": null,
+            "file_mb": null,
+            "full_resident_mode": true
+          }
+        },
+        "resources_after": {
+          "desktop": {
+            "available_gib": 3.1425514221191406,
+            "engine_reclaim_ram_gib": 19.57464599609375,
+            "engine_swap_mib": 464.0703125,
+            "file_blobs": 9534,
+            "file_mb": 15429.7,
+            "resident_gib": 22.5
+          },
+          "laptop": {
+            "available_gib": 6.946414947509766,
+            "commit_available_gib": 3.9001083374023438,
+            "worker_reclaim_ram_gib": 11.427780151367188,
+            "worker_reclaim_commit_gib": 15.101856231689453,
+            "worker_working_set_gib": 11.427780151367188,
+            "file_stats_available": false,
+            "file_blobs": null,
+            "file_mb": null,
+            "full_resident_mode": true
+          }
+        },
+        "min_headroom_gib": {
+          "desktop_ram": 2.968181610107422,
+          "laptop_ram": 6.946414947509766,
+          "laptop_commit": 3.5040359497070312
+        },
+        "desktop_physical_read_mib": 2970.953125,
+        "score_tok_s": 44.797377155364806,
+        "eligible": true,
+        "laptop_expert_resident_gib": 4.5,
+        "laptop_expert_complement_gib": 8.02
+      },
+      "failures": [
+        {
+          "label": "gpu-memory",
+          "error": "Candidate could not load; see opt-start log"
+        },
+        {
+          "label": "cpu-memory-conservative",
+          "error": "Candidate could not load; see opt-start log"
+        }
+      ],
+      "selected": {
+        "split": 36,
+        "desktop_cpu_budget_gib": 23.25,
+        "laptop_cpu_budget_gib": 5.75,
+        "desktop_pool_workers": 15,
+        "laptop_pool_workers": 15,
+        "prefill_chunk": 512,
+        "desktop_reserve_mib": 640,
+        "laptop_reserve_mib": 640,
+        "file_release": 1,
+        "spec_min_p": 0.5,
+        "model": "IQ3_S",
+        "label": "mtp05-confirm",
+        "pcie_frac": 0,
+        "calibration_version": "wired-runtime-v1",
+        "workloads": {
+          "prose": {
+            "median_tok_s": 51.6,
+            "runs": [
+              {
+                "timings": {
+                  "cache_n": 26,
+                  "prompt_n": 7,
+                  "prompt_ms": 97.0,
+                  "prompt_per_token_ms": 13.857,
+                  "prompt_per_second": 72.2,
+                  "predicted_n": 256,
+                  "predicted_ms": 5007.9,
+                  "predicted_per_token_ms": 19.562,
+                  "predicted_per_second": 51.1,
+                  "draft_n": 186,
+                  "draft_n_accepted": 104
+                },
+                "completion_tokens": 256
+              },
+              {
+                "timings": {
+                  "cache_n": 26,
+                  "prompt_n": 7,
+                  "prompt_ms": 121.8,
+                  "prompt_per_token_ms": 17.4,
+                  "prompt_per_second": 57.5,
+                  "predicted_n": 256,
+                  "predicted_ms": 4918.2,
+                  "predicted_per_token_ms": 19.212,
+                  "predicted_per_second": 52.1,
+                  "draft_n": 188,
+                  "draft_n_accepted": 96
+                },
+                "completion_tokens": 256
+              }
+            ]
+          },
+          "code": {
+            "median_tok_s": 64.85,
+            "runs": [
+              {
+                "timings": {
+                  "cache_n": 33,
+                  "prompt_n": 7,
+                  "prompt_ms": 93.8,
+                  "prompt_per_token_ms": 13.4,
+                  "prompt_per_second": 74.6,
+                  "predicted_n": 256,
+                  "predicted_ms": 4404.7,
+                  "predicted_per_token_ms": 17.206,
+                  "predicted_per_second": 58.1,
+                  "draft_n": 230,
+                  "draft_n_accepted": 168
+                },
+                "completion_tokens": 256
+              },
+              {
+                "timings": {
+                  "cache_n": 33,
+                  "prompt_n": 7,
+                  "prompt_ms": 101.0,
+                  "prompt_per_token_ms": 14.429,
+                  "prompt_per_second": 69.3,
+                  "predicted_n": 256,
+                  "predicted_ms": 3574.6,
+                  "predicted_per_token_ms": 13.963,
+                  "predicted_per_second": 71.6,
+                  "draft_n": 221,
+                  "draft_n_accepted": 170
+                },
+                "completion_tokens": 256
+              }
+            ]
+          }
+        },
+        "requests": [
+          {
+            "output_tokens": 256,
+            "ram_blobs": 12673,
+            "file_blobs": 446,
+            "file_mb": 100.1,
+            "drafts_offered": 221,
+            "drafts_accepted": 170,
+            "pcie_share": 0.0
+          },
+          {
+            "output_tokens": 256,
+            "ram_blobs": 18909,
+            "file_blobs": 610,
+            "file_mb": 183.0,
+            "drafts_offered": 230,
+            "drafts_accepted": 168,
+            "pcie_share": 0.0
+          },
+          {
+            "output_tokens": 256,
+            "ram_blobs": 11703,
+            "file_blobs": 462,
+            "file_mb": 174.4,
+            "drafts_offered": 188,
+            "drafts_accepted": 96,
+            "pcie_share": 0.0
+          },
+          {
+            "output_tokens": 256,
+            "ram_blobs": 13802,
+            "file_blobs": 500,
+            "file_mb": 182.9,
+            "drafts_offered": 186,
+            "drafts_accepted": 104,
+            "pcie_share": 0.0
+          }
+        ],
+        "request_scope": "four-measured-256-token-requests",
+        "resources_before": {
+          "desktop": {
+            "available_gib": 2.9341697692871094,
+            "engine_reclaim_ram_gib": 25.091083526611328,
+            "engine_swap_mib": 1014.4140625,
+            "file_blobs": 12783,
+            "file_mb": 15150.9,
+            "resident_gib": 23.25
+          },
+          "laptop": {
+            "available_gib": 7.686557769775391,
+            "commit_available_gib": 2.9687423706054688,
+            "worker_reclaim_ram_gib": 9.225738525390625,
+            "worker_reclaim_commit_gib": 16.521678924560547,
+            "worker_working_set_gib": 9.225738525390625,
+            "file_stats_available": false,
+            "file_blobs": null,
+            "file_mb": null,
+            "full_resident_mode": true
+          }
+        },
+        "resources_after": {
+          "desktop": {
+            "available_gib": 2.9407958984375,
+            "engine_reclaim_ram_gib": 25.189105987548828,
+            "engine_swap_mib": 1016.2734375,
+            "file_blobs": 16314,
+            "file_mb": 16327.0,
+            "resident_gib": 23.25
+          },
+          "laptop": {
+            "available_gib": 7.688785552978516,
+            "commit_available_gib": 3.0678024291992188,
+            "worker_reclaim_ram_gib": 9.340557098388672,
+            "worker_reclaim_commit_gib": 16.521678924560547,
+            "worker_working_set_gib": 9.340557098388672,
+            "file_stats_available": false,
+            "file_blobs": null,
+            "file_mb": null,
+            "full_resident_mode": true
+          }
+        },
+        "min_headroom_gib": {
+          "desktop_ram": 2.9008026123046875,
+          "laptop_ram": 7.383277893066406,
+          "laptop_commit": 2.8489151000976562
+        },
+        "desktop_physical_read_mib": 926.1171875,
+        "score_tok_s": 57.84686681230021,
+        "eligible": true,
+        "laptop_expert_resident_gib": 5.75,
+        "laptop_expert_complement_gib": 7.86,
+        "io_cache_state": "after-mtp-abba-not-comparable-to-cold-loaded-baseline",
+        "memory_parent_settings": {
+          "split": 36,
+          "desktop_cpu_budget_gib": 23.25,
+          "laptop_cpu_budget_gib": 5.75,
+          "desktop_pool_workers": 15,
+          "laptop_pool_workers": 15,
+          "prefill_chunk": 512,
+          "desktop_reserve_mib": 640,
+          "laptop_reserve_mib": 640,
+          "file_release": 1
+        }
+      }
+    },
+    "IQ3_XXS": {
+      "candidates": [
+        {
+          "split": 38,
+          "desktop_cpu_budget_gib": 20.75,
+          "laptop_cpu_budget_gib": 5.25,
+          "desktop_pool_workers": 15,
+          "laptop_pool_workers": 15,
+          "prefill_chunk": 512,
+          "desktop_reserve_mib": 800,
+          "laptop_reserve_mib": 800,
+          "file_release": 0,
+          "spec_min_p": 0,
+          "model": "IQ3_XXS",
+          "label": "baseline",
+          "pcie_frac": 0,
+          "calibration_version": "wired-runtime-v1",
+          "workloads": {
+            "prose": {
+              "median_tok_s": 54.0,
+              "runs": [
+                {
+                  "timings": {
+                    "cache_n": 26,
+                    "prompt_n": 7,
+                    "prompt_ms": 76.8,
+                    "prompt_per_token_ms": 10.971,
+                    "prompt_per_second": 91.1,
+                    "predicted_n": 256,
+                    "predicted_ms": 4786.3,
+                    "predicted_per_token_ms": 18.696,
+                    "predicted_per_second": 53.5,
+                    "draft_n": 408,
+                    "draft_n_accepted": 120
+                  },
+                  "completion_tokens": 256
+                },
+                {
+                  "timings": {
+                    "cache_n": 26,
+                    "prompt_n": 7,
+                    "prompt_ms": 98.1,
+                    "prompt_per_token_ms": 14.014,
+                    "prompt_per_second": 71.4,
+                    "predicted_n": 256,
+                    "predicted_ms": 4693.0,
+                    "predicted_per_token_ms": 18.332,
+                    "predicted_per_second": 54.5,
+                    "draft_n": 399,
+                    "draft_n_accepted": 123
+                  },
+                  "completion_tokens": 256
+                }
+              ]
+            },
+            "code": {
+              "median_tok_s": 70.3,
+              "runs": [
+                {
+                  "timings": {
+                    "cache_n": 33,
+                    "prompt_n": 7,
+                    "prompt_ms": 93.8,
+                    "prompt_per_token_ms": 13.4,
+                    "prompt_per_second": 74.6,
+                    "predicted_n": 256,
+                    "predicted_ms": 3919.3,
+                    "predicted_per_token_ms": 15.31,
+                    "predicted_per_second": 65.3,
+                    "draft_n": 285,
+                    "draft_n_accepted": 162
+                  },
+                  "completion_tokens": 256
+                },
+                {
+                  "timings": {
+                    "cache_n": 33,
+                    "prompt_n": 7,
+                    "prompt_ms": 78.9,
+                    "prompt_per_token_ms": 11.271,
+                    "prompt_per_second": 88.7,
+                    "predicted_n": 256,
+                    "predicted_ms": 3398.1,
+                    "predicted_per_token_ms": 13.274,
+                    "predicted_per_second": 75.3,
+                    "draft_n": 270,
+                    "draft_n_accepted": 168
+                  },
+                  "completion_tokens": 256
+                }
+              ]
+            }
+          },
+          "requests": [
+            {
+              "ram_blobs": 13612,
+              "file_blobs": 0,
+              "file_mb": 0,
+              "drafts_offered": 408,
+              "drafts_accepted": 120,
+              "pcie_share": 0.0
+            },
+            {
+              "ram_blobs": 14960,
+              "file_blobs": 0,
+              "file_mb": 0,
+              "drafts_offered": 219,
+              "drafts_accepted": 55,
+              "pcie_share": 0.0
+            },
+            {
+              "ram_blobs": 8627,
+              "file_blobs": 0,
+              "file_mb": 0,
+              "drafts_offered": 69,
+              "drafts_accepted": 43,
+              "pcie_share": 0.0
+            },
+            {
+              "ram_blobs": 17433,
+              "file_blobs": 0,
+              "file_mb": 0,
+              "drafts_offered": 105,
+              "drafts_accepted": 28,
+              "pcie_share": 0.0
+            }
+          ],
+          "resources_before": {
+            "desktop": {
+              "available_gib": 5.561836242675781,
+              "engine_reclaim_ram_gib": 22.67,
+              "engine_swap_mib": 853.25,
+              "file_blobs": 0,
+              "file_mb": 10790.5,
+              "resident_gib": 20.67
+            },
+            "laptop": {
+              "available_gib": 11.017330169677734,
+              "commit_available_gib": 3.5547828674316406,
+              "worker_reclaim_ram_gib": 6.588352203369141,
+              "worker_reclaim_commit_gib": 14.958393096923828,
+              "worker_working_set_gib": 6.588352203369141,
+              "file_stats_available": false,
+              "file_blobs": null,
+              "file_mb": null,
+              "full_resident_mode": true
+            }
+          },
+          "resources_after": {
+            "desktop": {
+              "available_gib": 5.489387512207031,
+              "engine_reclaim_ram_gib": 22.67,
+              "engine_swap_mib": 813.44140625,
+              "file_blobs": 0,
+              "file_mb": 10790.5,
+              "resident_gib": 20.67
+            },
+            "laptop": {
+              "available_gib": 10.985679626464844,
+              "commit_available_gib": 3.50927734375,
+              "worker_reclaim_ram_gib": 6.588630676269531,
+              "worker_reclaim_commit_gib": 14.958393096923828,
+              "worker_working_set_gib": 6.588630676269531,
+              "file_stats_available": false,
+              "file_blobs": null,
+              "file_mb": null,
+              "full_resident_mode": true
+            }
+          },
+          "min_headroom_gib": {
+            "desktop_ram": 5.489387512207031,
+            "laptop_ram": 10.985679626464844,
+            "laptop_commit": 3.50927734375
+          },
+          "desktop_physical_read_mib": 156.671875,
+          "score_tok_s": 61.61331025030225,
+          "eligible": true,
+          "laptop_expert_resident_gib": 4.55,
+          "laptop_expert_complement_gib": 4.55
+        },
+        {
+          "split": 38,
+          "desktop_cpu_budget_gib": 22.25,
+          "laptop_cpu_budget_gib": 6.75,
+          "desktop_pool_workers": 15,
+          "laptop_pool_workers": 15,
+          "prefill_chunk": 1024,
+          "desktop_reserve_mib": 640,
+          "laptop_reserve_mib": 640,
+          "file_release": 1,
+          "spec_min_p": 0,
+          "model": "IQ3_XXS",
+          "label": "gpu-memory",
+          "pcie_frac": 1,
+          "calibration_version": "wired-runtime-v1",
+          "workloads": {
+            "prose": {
+              "median_tok_s": 47.9,
+              "runs": [
+                {
+                  "timings": {
+                    "cache_n": 26,
+                    "prompt_n": 7,
+                    "prompt_ms": 91.8,
+                    "prompt_per_token_ms": 13.114,
+                    "prompt_per_second": 76.3,
+                    "predicted_n": 256,
+                    "predicted_ms": 5388.0,
+                    "predicted_per_token_ms": 21.047,
+                    "predicted_per_second": 47.5,
+                    "draft_n": 402,
+                    "draft_n_accepted": 121
+                  },
+                  "completion_tokens": 256
+                },
+                {
+                  "timings": {
+                    "cache_n": 26,
+                    "prompt_n": 7,
+                    "prompt_ms": 100.2,
+                    "prompt_per_token_ms": 14.314,
+                    "prompt_per_second": 69.9,
+                    "predicted_n": 256,
+                    "predicted_ms": 5299.7,
+                    "predicted_per_token_ms": 20.702,
+                    "predicted_per_second": 48.3,
+                    "draft_n": 414,
+                    "draft_n_accepted": 118
+                  },
+                  "completion_tokens": 256
+                }
+              ]
+            },
+            "code": {
+              "median_tok_s": 60.95,
+              "runs": [
+                {
+                  "timings": {
+                    "cache_n": 33,
+                    "prompt_n": 7,
+                    "prompt_ms": 111.6,
+                    "prompt_per_token_ms": 15.943,
+                    "prompt_per_second": 62.7,
+                    "predicted_n": 256,
+                    "predicted_ms": 4609.3,
+                    "predicted_per_token_ms": 18.005,
+                    "predicted_per_second": 55.5,
+                    "draft_n": 294,
+                    "draft_n_accepted": 160
+                  },
+                  "completion_tokens": 256
+                },
+                {
+                  "timings": {
+                    "cache_n": 33,
+                    "prompt_n": 7,
+                    "prompt_ms": 109.9,
+                    "prompt_per_token_ms": 15.7,
+                    "prompt_per_second": 63.7,
+                    "predicted_n": 256,
+                    "predicted_ms": 3856.5,
+                    "predicted_per_token_ms": 15.064,
+                    "predicted_per_second": 66.4,
+                    "draft_n": 264,
+                    "draft_n_accepted": 169
+                  },
+                  "completion_tokens": 256
+                }
+              ]
+            }
+          },
+          "requests": [
+            {
+              "ram_blobs": 14279,
+              "file_blobs": 0,
+              "file_mb": 0,
+              "drafts_offered": 402,
+              "drafts_accepted": 121,
+              "pcie_share": 0.07
+            },
+            {
+              "ram_blobs": 13566,
+              "file_blobs": 0,
+              "file_mb": 0,
+              "drafts_offered": 198,
+              "drafts_accepted": 61,
+              "pcie_share": 0.15
+            },
+            {
+              "ram_blobs": 8630,
+              "file_blobs": 0,
+              "file_mb": 0,
+              "drafts_offered": 69,
+              "drafts_accepted": 43,
+              "pcie_share": 0.317
+            },
+            {
+              "ram_blobs": 18733,
+              "file_blobs": 0,
+              "file_mb": 0,
+              "drafts_offered": 117,
+              "drafts_accepted": 26,
+              "pcie_share": 0.421
+            }
+          ],
+          "resources_before": {
+            "desktop": {
+              "available_gib": 5.643703460693359,
+              "engine_reclaim_ram_gib": 15.60733413696289,
+              "engine_swap_mib": 851.40234375,
+              "file_blobs": 0,
+              "file_mb": 10957.5,
+              "resident_gib": 20.51
+            },
+            "laptop": {
+              "available_gib": 11.029926300048828,
+              "commit_available_gib": 3.4931068420410156,
+              "worker_reclaim_ram_gib": 6.440792083740234,
+              "worker_reclaim_commit_gib": 14.969902038574219,
+              "worker_working_set_gib": 6.440792083740234,
+              "file_stats_available": false,
+              "file_blobs": null,
+              "file_mb": null,
+              "full_resident_mode": true
+            }
+          },
+          "resources_after": {
+            "desktop": {
+              "available_gib": 5.6049041748046875,
+              "engine_reclaim_ram_gib": 19.76056671142578,
+              "engine_swap_mib": 808.14453125,
+              "file_blobs": 0,
+              "file_mb": 10957.5,
+              "resident_gib": 20.51
+            },
+            "laptop": {
+              "available_gib": 10.985248565673828,
+              "commit_available_gib": 3.443706512451172,
+              "worker_reclaim_ram_gib": 6.441009521484375,
+              "worker_reclaim_commit_gib": 14.969902038574219,
+              "worker_working_set_gib": 6.441009521484375,
+              "file_stats_available": false,
+              "file_blobs": null,
+              "file_mb": null,
+              "full_resident_mode": true
+            }
+          },
+          "min_headroom_gib": {
+            "desktop_ram": 5.59796142578125,
+            "laptop_ram": 10.817428588867188,
+            "laptop_commit": 3.1370811462402344
+          },
+          "desktop_physical_read_mib": 185.3828125,
+          "score_tok_s": 54.03244395731143,
+          "eligible": true,
+          "laptop_expert_resident_gib": 4.4,
+          "laptop_expert_complement_gib": 4.4
+        },
+        {
+          "split": 38,
+          "desktop_cpu_budget_gib": 22.25,
+          "laptop_cpu_budget_gib": 6.75,
+          "desktop_pool_workers": 15,
+          "laptop_pool_workers": 15,
+          "prefill_chunk": 1024,
+          "desktop_reserve_mib": 640,
+          "laptop_reserve_mib": 640,
+          "file_release": 1,
+          "spec_min_p": 0,
+          "model": "IQ3_XXS",
+          "label": "alternate",
+          "pcie_frac": 0.5,
+          "calibration_version": "wired-runtime-v1",
+          "workloads": {
+            "prose": {
+              "median_tok_s": 50.65,
+              "runs": [
+                {
+                  "timings": {
+                    "cache_n": 26,
+                    "prompt_n": 7,
+                    "prompt_ms": 79.2,
+                    "prompt_per_token_ms": 11.314,
+                    "prompt_per_second": 88.4,
+                    "predicted_n": 256,
+                    "predicted_ms": 4935.3,
+                    "predicted_per_token_ms": 19.279,
+                    "predicted_per_second": 51.9,
+                    "draft_n": 411,
+                    "draft_n_accepted": 120
+                  },
+                  "completion_tokens": 256
+                },
+                {
+                  "timings": {
+                    "cache_n": 26,
+                    "prompt_n": 7,
+                    "prompt_ms": 96.4,
+                    "prompt_per_token_ms": 13.771,
+                    "prompt_per_second": 72.6,
+                    "predicted_n": 256,
+                    "predicted_ms": 5182.7,
+                    "predicted_per_token_ms": 20.245,
+                    "predicted_per_second": 49.4,
+                    "draft_n": 414,
+                    "draft_n_accepted": 120
+                  },
+                  "completion_tokens": 256
+                }
+              ]
+            },
+            "code": {
+              "median_tok_s": 65.4,
+              "runs": [
+                {
+                  "timings": {
+                    "cache_n": 33,
+                    "prompt_n": 7,
+                    "prompt_ms": 107.3,
+                    "prompt_per_token_ms": 15.329,
+                    "prompt_per_second": 65.2,
+                    "predicted_n": 256,
+                    "predicted_ms": 4361.4,
+                    "predicted_per_token_ms": 17.037,
+                    "predicted_per_second": 58.7,
+                    "draft_n": 279,
+                    "draft_n_accepted": 164
+                  },
+                  "completion_tokens": 256
+                },
+                {
+                  "timings": {
+                    "cache_n": 33,
+                    "prompt_n": 7,
+                    "prompt_ms": 84.7,
+                    "prompt_per_token_ms": 12.1,
+                    "prompt_per_second": 82.6,
+                    "predicted_n": 256,
+                    "predicted_ms": 3549.3,
+                    "predicted_per_token_ms": 13.864,
+                    "predicted_per_second": 72.1,
+                    "draft_n": 264,
+                    "draft_n_accepted": 170
+                  },
+                  "completion_tokens": 256
+                }
+              ]
+            }
+          },
+          "requests": [
+            {
+              "ram_blobs": 13062,
+              "file_blobs": 0,
+              "file_mb": 0,
+              "drafts_offered": 411,
+              "drafts_accepted": 120,
+              "pcie_share": 0.022
+            },
+            {
+              "ram_blobs": 13813,
+              "file_blobs": 0,
+              "file_mb": 0,
+              "drafts_offered": 210,
+              "drafts_accepted": 57,
+              "pcie_share": 0.055
+            },
+            {
+              "ram_blobs": 8450,
+              "file_blobs": 0,
+              "file_mb": 0,
+              "drafts_offered": 72,
+              "drafts_accepted": 42,
+              "pcie_share": 0.117
+            },
+            {
+              "ram_blobs": 17496,
+              "file_blobs": 0,
+              "file_mb": 0,
+              "drafts_offered": 108,
+              "drafts_accepted": 29,
+              "pcie_share": 0.173
+            }
+          ],
+          "resources_before": {
+            "desktop": {
+              "available_gib": 5.6350860595703125,
+              "engine_reclaim_ram_gib": 16.33730697631836,
+              "engine_swap_mib": 851.84375,
+              "file_blobs": 0,
+              "file_mb": 10957.5,
+              "resident_gib": 20.51
+            },
+            "laptop": {
+              "available_gib": 11.11322021484375,
+              "commit_available_gib": 3.55938720703125,
+              "worker_reclaim_ram_gib": 6.441410064697266,
+              "worker_reclaim_commit_gib": 14.961971282958984,
+              "worker_working_set_gib": 6.441410064697266,
+              "file_stats_available": false,
+              "file_blobs": null,
+              "file_mb": null,
+              "full_resident_mode": true
+            }
+          },
+          "resources_after": {
+            "desktop": {
+              "available_gib": 5.6033935546875,
+              "engine_reclaim_ram_gib": 20.645183563232422,
+              "engine_swap_mib": 812.3984375,
+              "file_blobs": 0,
+              "file_mb": 10957.5,
+              "resident_gib": 20.51
+            },
+            "laptop": {
+              "available_gib": 11.082820892333984,
+              "commit_available_gib": 3.5242385864257812,
+              "worker_reclaim_ram_gib": 6.4416961669921875,
+              "worker_reclaim_commit_gib": 14.961971282958984,
+              "worker_working_set_gib": 6.4416961669921875,
+              "file_stats_available": false,
+              "file_blobs": null,
+              "file_mb": null,
+              "full_resident_mode": true
+            }
+          },
+          "min_headroom_gib": {
+            "desktop_ram": 5.586982727050781,
+            "laptop_ram": 11.080055236816406,
+            "laptop_commit": 3.5242385864257812
+          },
+          "desktop_physical_read_mib": 152.54296875,
+          "score_tok_s": 57.55440904048968,
+          "eligible": true,
+          "laptop_expert_resident_gib": 4.4,
+          "laptop_expert_complement_gib": 4.4
+        },
+        {
+          "split": 38,
+          "desktop_cpu_budget_gib": 20.75,
+          "laptop_cpu_budget_gib": 5.25,
+          "desktop_pool_workers": 8,
+          "laptop_pool_workers": 8,
+          "prefill_chunk": 512,
+          "desktop_reserve_mib": 800,
+          "laptop_reserve_mib": 800,
+          "file_release": 0,
+          "spec_min_p": 0,
+          "model": "IQ3_XXS",
+          "label": "cpu-workers8",
+          "pcie_frac": 0,
+          "calibration_version": "wired-runtime-v1",
+          "workloads": {
+            "prose": {
+              "median_tok_s": 55.349999999999994,
+              "runs": [
+                {
+                  "timings": {
+                    "cache_n": 26,
+                    "prompt_n": 7,
+                    "prompt_ms": 83.6,
+                    "prompt_per_token_ms": 11.943,
+                    "prompt_per_second": 83.7,
+                    "predicted_n": 256,
+                    "predicted_ms": 4716.0,
+                    "predicted_per_token_ms": 18.422,
+                    "predicted_per_second": 54.3,
+                    "draft_n": 408,
+                    "draft_n_accepted": 120
+                  },
+                  "completion_tokens": 256
+                },
+                {
+                  "timings": {
+                    "cache_n": 26,
+                    "prompt_n": 7,
+                    "prompt_ms": 98.0,
+                    "prompt_per_token_ms": 14.0,
+                    "prompt_per_second": 71.4,
+                    "predicted_n": 256,
+                    "predicted_ms": 4538.1,
+                    "predicted_per_token_ms": 17.727,
+                    "predicted_per_second": 56.4,
+                    "draft_n": 399,
+                    "draft_n_accepted": 123
+                  },
+                  "completion_tokens": 256
+                }
+              ]
+            },
+            "code": {
+              "median_tok_s": 72.05,
+              "runs": [
+                {
+                  "timings": {
+                    "cache_n": 33,
+                    "prompt_n": 7,
+                    "prompt_ms": 98.5,
+                    "prompt_per_token_ms": 14.071,
+                    "prompt_per_second": 71.1,
+                    "predicted_n": 256,
+                    "predicted_ms": 3815.9,
+                    "predicted_per_token_ms": 14.906,
+                    "predicted_per_second": 67.1,
+                    "draft_n": 285,
+                    "draft_n_accepted": 162
+                  },
+                  "completion_tokens": 256
+                },
+                {
+                  "timings": {
+                    "cache_n": 33,
+                    "prompt_n": 7,
+                    "prompt_ms": 78.7,
+                    "prompt_per_token_ms": 11.243,
+                    "prompt_per_second": 88.9,
+                    "predicted_n": 256,
+                    "predicted_ms": 3322.6,
+                    "predicted_per_token_ms": 12.979,
+                    "predicted_per_second": 77.0,
+                    "draft_n": 270,
+                    "draft_n_accepted": 168
+                  },
+                  "completion_tokens": 256
+                }
+              ]
+            }
+          },
+          "requests": [
+            {
+              "ram_blobs": 13612,
+              "file_blobs": 0,
+              "file_mb": 0,
+              "drafts_offered": 408,
+              "drafts_accepted": 120,
+              "pcie_share": 0.0
+            },
+            {
+              "ram_blobs": 14960,
+              "file_blobs": 0,
+              "file_mb": 0,
+              "drafts_offered": 219,
+              "drafts_accepted": 55,
+              "pcie_share": 0.0
+            },
+            {
+              "ram_blobs": 8627,
+              "file_blobs": 0,
+              "file_mb": 0,
+              "drafts_offered": 69,
+              "drafts_accepted": 43,
+              "pcie_share": 0.0
+            },
+            {
+              "ram_blobs": 17433,
+              "file_blobs": 0,
+              "file_mb": 0,
+              "drafts_offered": 105,
+              "drafts_accepted": 28,
+              "pcie_share": 0.0
+            }
+          ],
+          "resources_before": {
+            "desktop": {
+              "available_gib": 5.601642608642578,
+              "engine_reclaim_ram_gib": 22.67,
+              "engine_swap_mib": 851.0703125,
+              "file_blobs": 0,
+              "file_mb": 10790.5,
+              "resident_gib": 20.67
+            },
+            "laptop": {
+              "available_gib": 10.152050018310547,
+              "commit_available_gib": 2.8179550170898438,
+              "worker_reclaim_ram_gib": 6.586910247802734,
+              "worker_reclaim_commit_gib": 14.959869384765625,
+              "worker_working_set_gib": 6.586910247802734,
+              "file_stats_available": false,
+              "file_blobs": null,
+              "file_mb": null,
+              "full_resident_mode": true
+            }
+          },
+          "resources_after": {
+            "desktop": {
+              "available_gib": 5.492439270019531,
+              "engine_reclaim_ram_gib": 22.67,
+              "engine_swap_mib": 811.26171875,
+              "file_blobs": 0,
+              "file_mb": 10790.5,
+              "resident_gib": 20.67
+            },
+            "laptop": {
+              "available_gib": 10.041763305664062,
+              "commit_available_gib": 2.6583175659179688,
+              "worker_reclaim_ram_gib": 6.587226867675781,
+              "worker_reclaim_commit_gib": 14.959861755371094,
+              "worker_working_set_gib": 6.587226867675781,
+              "file_stats_available": false,
+              "file_blobs": null,
+              "file_mb": null,
+              "full_resident_mode": true
+            }
+          },
+          "min_headroom_gib": {
+            "desktop_ram": 5.489452362060547,
+            "laptop_ram": 10.019908905029297,
+            "laptop_commit": 2.611522674560547
+          },
+          "desktop_physical_read_mib": 151.0625,
+          "score_tok_s": 63.1503562935317,
+          "eligible": true,
+          "laptop_expert_resident_gib": 4.55,
+          "laptop_expert_complement_gib": 4.55
+        },
+        {
+          "split": 38,
+          "desktop_cpu_budget_gib": 20.75,
+          "laptop_cpu_budget_gib": 5.25,
+          "desktop_pool_workers": 8,
+          "laptop_pool_workers": 8,
+          "prefill_chunk": 512,
+          "desktop_reserve_mib": 800,
+          "laptop_reserve_mib": 800,
+          "file_release": 0,
+          "spec_min_p": 0.5,
+          "model": "IQ3_XXS",
+          "label": "mtp05-confirm-resumed",
+          "pcie_frac": 0,
+          "calibration_version": "wired-runtime-v1",
+          "workloads": {
+            "prose": {
+              "median_tok_s": 59.150000000000006,
+              "runs": [
+                {
+                  "timings": {
+                    "cache_n": 26,
+                    "prompt_n": 7,
+                    "prompt_ms": 81.2,
+                    "prompt_per_token_ms": 11.6,
+                    "prompt_per_second": 86.2,
+                    "predicted_n": 256,
+                    "predicted_ms": 4402.4,
+                    "predicted_per_token_ms": 17.197,
+                    "predicted_per_second": 58.2,
+                    "draft_n": 187,
+                    "draft_n_accepted": 101
+                  },
+                  "completion_tokens": 256
+                },
+                {
+                  "timings": {
+                    "cache_n": 26,
+                    "prompt_n": 7,
+                    "prompt_ms": 97.6,
+                    "prompt_per_token_ms": 13.943,
+                    "prompt_per_second": 71.7,
+                    "predicted_n": 256,
+                    "predicted_ms": 4257.4,
+                    "predicted_per_token_ms": 16.63,
+                    "predicted_per_second": 60.1,
+                    "draft_n": 175,
+                    "draft_n_accepted": 93
+                  },
+                  "completion_tokens": 256
+                }
+              ]
+            },
+            "code": {
+              "median_tok_s": 70.1,
+              "runs": [
+                {
+                  "timings": {
+                    "cache_n": 33,
+                    "prompt_n": 7,
+                    "prompt_ms": 101.0,
+                    "prompt_per_token_ms": 14.429,
+                    "prompt_per_second": 69.3,
+                    "predicted_n": 256,
+                    "predicted_ms": 3997.7,
+                    "predicted_per_token_ms": 15.616,
+                    "predicted_per_second": 64.0,
+                    "draft_n": 229,
+                    "draft_n_accepted": 168
+                  },
+                  "completion_tokens": 256
+                },
+                {
+                  "timings": {
+                    "cache_n": 33,
+                    "prompt_n": 7,
+                    "prompt_ms": 86.0,
+                    "prompt_per_token_ms": 12.286,
+                    "prompt_per_second": 81.4,
+                    "predicted_n": 256,
+                    "predicted_ms": 3361.5,
+                    "predicted_per_token_ms": 13.131,
+                    "predicted_per_second": 76.2,
+                    "draft_n": 227,
+                    "draft_n_accepted": 156
+                  },
+                  "completion_tokens": 256
+                }
+              ]
+            }
+          },
+          "requests": [
+            {
+              "output_tokens": 256,
+              "ram_blobs": 9353,
+              "file_blobs": 0,
+              "file_mb": 0,
+              "drafts_offered": 227,
+              "drafts_accepted": 156,
+              "pcie_share": 0.0
+            },
+            {
+              "output_tokens": 256,
+              "ram_blobs": 16424,
+              "file_blobs": 0,
+              "file_mb": 0,
+              "drafts_offered": 229,
+              "drafts_accepted": 168,
+              "pcie_share": 0.0
+            },
+            {
+              "output_tokens": 256,
+              "ram_blobs": 9040,
+              "file_blobs": 0,
+              "file_mb": 0,
+              "drafts_offered": 175,
+              "drafts_accepted": 93,
+              "pcie_share": 0.0
+            },
+            {
+              "output_tokens": 256,
+              "ram_blobs": 10979,
+              "file_blobs": 0,
+              "file_mb": 0,
+              "drafts_offered": 187,
+              "drafts_accepted": 101,
+              "pcie_share": 0.0
+            }
+          ],
+          "request_scope": "four-measured-256-token-requests",
+          "resources_before": {
+            "desktop": {
+              "available_gib": 5.3547210693359375,
+              "engine_reclaim_ram_gib": 22.66,
+              "engine_swap_mib": 843.99609375,
+              "file_blobs": 0,
+              "file_mb": 10796.6,
+              "resident_gib": 20.66
+            },
+            "laptop": {
+              "available_gib": 11.441524505615234,
+              "commit_available_gib": 7.4825439453125,
+              "worker_reclaim_ram_gib": 6.591556549072266,
+              "worker_reclaim_commit_gib": 14.962959289550781,
+              "worker_working_set_gib": 6.591556549072266,
+              "file_stats_available": false,
+              "file_blobs": null,
+              "file_mb": null,
+              "full_resident_mode": true
+            }
+          },
+          "resources_after": {
+            "desktop": {
+              "available_gib": 5.323509216308594,
+              "engine_reclaim_ram_gib": 22.66,
+              "engine_swap_mib": 811.93359375,
+              "file_blobs": 0,
+              "file_mb": 10796.6,
+              "resident_gib": 20.66
+            },
+            "laptop": {
+              "available_gib": 11.482574462890625,
+              "commit_available_gib": 7.512210845947266,
+              "worker_reclaim_ram_gib": 6.5917510986328125,
+              "worker_reclaim_commit_gib": 14.962959289550781,
+              "worker_working_set_gib": 6.5917510986328125,
+              "file_stats_available": false,
+              "file_blobs": null,
+              "file_mb": null,
+              "full_resident_mode": true
+            }
+          },
+          "min_headroom_gib": {
+            "desktop_ram": 5.323509216308594,
+            "laptop_ram": 11.43886947631836,
+            "laptop_commit": 7.471351623535156
+          },
+          "desktop_physical_read_mib": 114.1953125,
+          "score_tok_s": 64.39266262548863,
+          "eligible": true,
+          "laptop_expert_resident_gib": 4.55,
+          "laptop_expert_complement_gib": 4.55
+        }
+      ],
+      "baseline": {
+        "split": 38,
+        "desktop_cpu_budget_gib": 20.75,
+        "laptop_cpu_budget_gib": 5.25,
+        "desktop_pool_workers": 15,
+        "laptop_pool_workers": 15,
+        "prefill_chunk": 512,
+        "desktop_reserve_mib": 800,
+        "laptop_reserve_mib": 800,
+        "file_release": 0,
+        "spec_min_p": 0,
+        "model": "IQ3_XXS",
+        "label": "baseline",
+        "pcie_frac": 0,
+        "calibration_version": "wired-runtime-v1",
+        "workloads": {
+          "prose": {
+            "median_tok_s": 54.0,
+            "runs": [
+              {
+                "timings": {
+                  "cache_n": 26,
+                  "prompt_n": 7,
+                  "prompt_ms": 76.8,
+                  "prompt_per_token_ms": 10.971,
+                  "prompt_per_second": 91.1,
+                  "predicted_n": 256,
+                  "predicted_ms": 4786.3,
+                  "predicted_per_token_ms": 18.696,
+                  "predicted_per_second": 53.5,
+                  "draft_n": 408,
+                  "draft_n_accepted": 120
+                },
+                "completion_tokens": 256
+              },
+              {
+                "timings": {
+                  "cache_n": 26,
+                  "prompt_n": 7,
+                  "prompt_ms": 98.1,
+                  "prompt_per_token_ms": 14.014,
+                  "prompt_per_second": 71.4,
+                  "predicted_n": 256,
+                  "predicted_ms": 4693.0,
+                  "predicted_per_token_ms": 18.332,
+                  "predicted_per_second": 54.5,
+                  "draft_n": 399,
+                  "draft_n_accepted": 123
+                },
+                "completion_tokens": 256
+              }
+            ]
+          },
+          "code": {
+            "median_tok_s": 70.3,
+            "runs": [
+              {
+                "timings": {
+                  "cache_n": 33,
+                  "prompt_n": 7,
+                  "prompt_ms": 93.8,
+                  "prompt_per_token_ms": 13.4,
+                  "prompt_per_second": 74.6,
+                  "predicted_n": 256,
+                  "predicted_ms": 3919.3,
+                  "predicted_per_token_ms": 15.31,
+                  "predicted_per_second": 65.3,
+                  "draft_n": 285,
+                  "draft_n_accepted": 162
+                },
+                "completion_tokens": 256
+              },
+              {
+                "timings": {
+                  "cache_n": 33,
+                  "prompt_n": 7,
+                  "prompt_ms": 78.9,
+                  "prompt_per_token_ms": 11.271,
+                  "prompt_per_second": 88.7,
+                  "predicted_n": 256,
+                  "predicted_ms": 3398.1,
+                  "predicted_per_token_ms": 13.274,
+                  "predicted_per_second": 75.3,
+                  "draft_n": 270,
+                  "draft_n_accepted": 168
+                },
+                "completion_tokens": 256
+              }
+            ]
+          }
+        },
+        "requests": [
+          {
+            "ram_blobs": 13612,
+            "file_blobs": 0,
+            "file_mb": 0,
+            "drafts_offered": 408,
+            "drafts_accepted": 120,
+            "pcie_share": 0.0
+          },
+          {
+            "ram_blobs": 14960,
+            "file_blobs": 0,
+            "file_mb": 0,
+            "drafts_offered": 219,
+            "drafts_accepted": 55,
+            "pcie_share": 0.0
+          },
+          {
+            "ram_blobs": 8627,
+            "file_blobs": 0,
+            "file_mb": 0,
+            "drafts_offered": 69,
+            "drafts_accepted": 43,
+            "pcie_share": 0.0
+          },
+          {
+            "ram_blobs": 17433,
+            "file_blobs": 0,
+            "file_mb": 0,
+            "drafts_offered": 105,
+            "drafts_accepted": 28,
+            "pcie_share": 0.0
+          }
+        ],
+        "resources_before": {
+          "desktop": {
+            "available_gib": 5.561836242675781,
+            "engine_reclaim_ram_gib": 22.67,
+            "engine_swap_mib": 853.25,
+            "file_blobs": 0,
+            "file_mb": 10790.5,
+            "resident_gib": 20.67
+          },
+          "laptop": {
+            "available_gib": 11.017330169677734,
+            "commit_available_gib": 3.5547828674316406,
+            "worker_reclaim_ram_gib": 6.588352203369141,
+            "worker_reclaim_commit_gib": 14.958393096923828,
+            "worker_working_set_gib": 6.588352203369141,
+            "file_stats_available": false,
+            "file_blobs": null,
+            "file_mb": null,
+            "full_resident_mode": true
+          }
+        },
+        "resources_after": {
+          "desktop": {
+            "available_gib": 5.489387512207031,
+            "engine_reclaim_ram_gib": 22.67,
+            "engine_swap_mib": 813.44140625,
+            "file_blobs": 0,
+            "file_mb": 10790.5,
+            "resident_gib": 20.67
+          },
+          "laptop": {
+            "available_gib": 10.985679626464844,
+            "commit_available_gib": 3.50927734375,
+            "worker_reclaim_ram_gib": 6.588630676269531,
+            "worker_reclaim_commit_gib": 14.958393096923828,
+            "worker_working_set_gib": 6.588630676269531,
+            "file_stats_available": false,
+            "file_blobs": null,
+            "file_mb": null,
+            "full_resident_mode": true
+          }
+        },
+        "min_headroom_gib": {
+          "desktop_ram": 5.489387512207031,
+          "laptop_ram": 10.985679626464844,
+          "laptop_commit": 3.50927734375
+        },
+        "desktop_physical_read_mib": 156.671875,
+        "score_tok_s": 61.61331025030225,
+        "eligible": true,
+        "laptop_expert_resident_gib": 4.55,
+        "laptop_expert_complement_gib": 4.55
+      },
+      "selected": {
+        "split": 38,
+        "desktop_cpu_budget_gib": 20.75,
+        "laptop_cpu_budget_gib": 5.25,
+        "desktop_pool_workers": 8,
+        "laptop_pool_workers": 8,
+        "prefill_chunk": 512,
+        "desktop_reserve_mib": 800,
+        "laptop_reserve_mib": 800,
+        "file_release": 0,
+        "spec_min_p": 0.5,
+        "model": "IQ3_XXS",
+        "label": "mtp05-confirm-resumed",
+        "pcie_frac": 0,
+        "calibration_version": "wired-runtime-v1",
+        "workloads": {
+          "prose": {
+            "median_tok_s": 59.150000000000006,
+            "runs": [
+              {
+                "timings": {
+                  "cache_n": 26,
+                  "prompt_n": 7,
+                  "prompt_ms": 81.2,
+                  "prompt_per_token_ms": 11.6,
+                  "prompt_per_second": 86.2,
+                  "predicted_n": 256,
+                  "predicted_ms": 4402.4,
+                  "predicted_per_token_ms": 17.197,
+                  "predicted_per_second": 58.2,
+                  "draft_n": 187,
+                  "draft_n_accepted": 101
+                },
+                "completion_tokens": 256
+              },
+              {
+                "timings": {
+                  "cache_n": 26,
+                  "prompt_n": 7,
+                  "prompt_ms": 97.6,
+                  "prompt_per_token_ms": 13.943,
+                  "prompt_per_second": 71.7,
+                  "predicted_n": 256,
+                  "predicted_ms": 4257.4,
+                  "predicted_per_token_ms": 16.63,
+                  "predicted_per_second": 60.1,
+                  "draft_n": 175,
+                  "draft_n_accepted": 93
+                },
+                "completion_tokens": 256
+              }
+            ]
+          },
+          "code": {
+            "median_tok_s": 70.1,
+            "runs": [
+              {
+                "timings": {
+                  "cache_n": 33,
+                  "prompt_n": 7,
+                  "prompt_ms": 101.0,
+                  "prompt_per_token_ms": 14.429,
+                  "prompt_per_second": 69.3,
+                  "predicted_n": 256,
+                  "predicted_ms": 3997.7,
+                  "predicted_per_token_ms": 15.616,
+                  "predicted_per_second": 64.0,
+                  "draft_n": 229,
+                  "draft_n_accepted": 168
+                },
+                "completion_tokens": 256
+              },
+              {
+                "timings": {
+                  "cache_n": 33,
+                  "prompt_n": 7,
+                  "prompt_ms": 86.0,
+                  "prompt_per_token_ms": 12.286,
+                  "prompt_per_second": 81.4,
+                  "predicted_n": 256,
+                  "predicted_ms": 3361.5,
+                  "predicted_per_token_ms": 13.131,
+                  "predicted_per_second": 76.2,
+                  "draft_n": 227,
+                  "draft_n_accepted": 156
+                },
+                "completion_tokens": 256
+              }
+            ]
+          }
+        },
+        "requests": [
+          {
+            "output_tokens": 256,
+            "ram_blobs": 9353,
+            "file_blobs": 0,
+            "file_mb": 0,
+            "drafts_offered": 227,
+            "drafts_accepted": 156,
+            "pcie_share": 0.0
+          },
+          {
+            "output_tokens": 256,
+            "ram_blobs": 16424,
+            "file_blobs": 0,
+            "file_mb": 0,
+            "drafts_offered": 229,
+            "drafts_accepted": 168,
+            "pcie_share": 0.0
+          },
+          {
+            "output_tokens": 256,
+            "ram_blobs": 9040,
+            "file_blobs": 0,
+            "file_mb": 0,
+            "drafts_offered": 175,
+            "drafts_accepted": 93,
+            "pcie_share": 0.0
+          },
+          {
+            "output_tokens": 256,
+            "ram_blobs": 10979,
+            "file_blobs": 0,
+            "file_mb": 0,
+            "drafts_offered": 187,
+            "drafts_accepted": 101,
+            "pcie_share": 0.0
+          }
+        ],
+        "request_scope": "four-measured-256-token-requests",
+        "resources_before": {
+          "desktop": {
+            "available_gib": 5.3547210693359375,
+            "engine_reclaim_ram_gib": 22.66,
+            "engine_swap_mib": 843.99609375,
+            "file_blobs": 0,
+            "file_mb": 10796.6,
+            "resident_gib": 20.66
+          },
+          "laptop": {
+            "available_gib": 11.441524505615234,
+            "commit_available_gib": 7.4825439453125,
+            "worker_reclaim_ram_gib": 6.591556549072266,
+            "worker_reclaim_commit_gib": 14.962959289550781,
+            "worker_working_set_gib": 6.591556549072266,
+            "file_stats_available": false,
+            "file_blobs": null,
+            "file_mb": null,
+            "full_resident_mode": true
+          }
+        },
+        "resources_after": {
+          "desktop": {
+            "available_gib": 5.323509216308594,
+            "engine_reclaim_ram_gib": 22.66,
+            "engine_swap_mib": 811.93359375,
+            "file_blobs": 0,
+            "file_mb": 10796.6,
+            "resident_gib": 20.66
+          },
+          "laptop": {
+            "available_gib": 11.482574462890625,
+            "commit_available_gib": 7.512210845947266,
+            "worker_reclaim_ram_gib": 6.5917510986328125,
+            "worker_reclaim_commit_gib": 14.962959289550781,
+            "worker_working_set_gib": 6.5917510986328125,
+            "file_stats_available": false,
+            "file_blobs": null,
+            "file_mb": null,
+            "full_resident_mode": true
+          }
+        },
+        "min_headroom_gib": {
+          "desktop_ram": 5.323509216308594,
+          "laptop_ram": 11.43886947631836,
+          "laptop_commit": 7.471351623535156
+        },
+        "desktop_physical_read_mib": 114.1953125,
+        "score_tok_s": 64.39266262548863,
+        "eligible": true,
+        "laptop_expert_resident_gib": 4.55,
+        "laptop_expert_complement_gib": 4.55
+      },
+      "failures": [
+        {
+          "label": "cpu-split36",
+          "error": "Candidate could not load; see opt-start log"
+        },
+        {
+          "label": "cpu-split36",
+          "error": "Candidate could not load; see opt-start log"
+        }
+      ]
+    }
+  },
+  "profiles_updated": true,
+  "completed_client_date": "2026-10-11"
+}

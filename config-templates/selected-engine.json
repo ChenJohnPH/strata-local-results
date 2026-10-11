@@ -1,13 +1,44 @@
 {
   "engine": "strata",
-  "status": "verified",
-  "model": "IQ3_XXS",
+  "engine_version": "0.1.40.3",
+  "status": "benchmark-verified",
   "retained_models": [
     "IQ3_XXS",
     "IQ3_S"
   ],
-  "transport": "Direct",
-  "split": 42,
-  "context": 16384,
-  "note": "Model and inference summary only; no host, account or security configuration."
+  "transport": "Direct LAN TCP",
+  "selection_policy": "Choose a measured layer/RAM/CPU/GPU configuration that fits current available RAM and commit capacity. Reuse an unchanged warmed model.",
+  "presets": {
+    "IQ3_S": {
+      "split": 36,
+      "desktop_cpu_budget_gib": 23.25,
+      "laptop_cpu_budget_gib": 5.75,
+      "desktop_pool_workers": 15,
+      "laptop_pool_workers": 15,
+      "pcie_frac": 0,
+      "prefill_chunk": 512,
+      "desktop_reserve_mib": 640,
+      "laptop_reserve_mib": 640,
+      "file_release": 1,
+      "spec_min_p": 0.5,
+      "context": 8192,
+      "warmup_tokens": 128
+    },
+    "IQ3_XXS": {
+      "split": 38,
+      "desktop_cpu_budget_gib": 20.75,
+      "laptop_cpu_budget_gib": 5.25,
+      "desktop_pool_workers": 8,
+      "laptop_pool_workers": 8,
+      "pcie_frac": 0,
+      "prefill_chunk": 512,
+      "desktop_reserve_mib": 800,
+      "laptop_reserve_mib": 800,
+      "file_release": 0,
+      "spec_min_p": 0.5,
+      "context": 16384,
+      "warmup_tokens": 128
+    }
+  },
+  "note": "Inference summary only; no host address, account, credential or security configuration."
 }

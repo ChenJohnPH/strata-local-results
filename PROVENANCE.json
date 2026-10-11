@@ -7,15 +7,17 @@
   "prepared_source_files": 3656,
   "model_weights_included": false,
   "credentials_included": false,
-  "updated_utc": "2026-10-10T04:20:25.150371+00:00",
+  "updated_utc": "2026-10-11T01:41:14.318254+00:00",
   "two_pc_inference_verified": true,
   "fork_commit": "7add08dbd076f7f5fe897c76769064332450fe61",
   "engine_version": "0.1.40.3",
-  "latest_benchmark": "results/2026-10-10-iq3-comparison/summary.json",
+  "latest_benchmark": "results/2026-10-11-wired-optimization/summary.json",
   "model_source": "ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF",
   "model_revision": "ed59f92082b1e93c0e96d60a8b11aab089b52f09",
   "source_snapshot_note": "Previously published upstream source snapshot retained. Local security and deployment deltas are excluded. CUDA Windows/Linux verified; HIP/SYCL not tested.",
-  "publication_scope": "Synthetic benchmark outputs, anonymized hardware snapshots, inference parameters, generic benchmark/warm-up tools, reports and previously published source reference.",
+  "publication_scope": "Anonymized inference timings, synthetic benchmark metadata, hardware/capacity snapshots, inference parameter templates and reports. Existing generic tools/source reference retained; local management and security implementations excluded.",
   "security_configuration_included": false,
-  "actual_host_addresses_included": false
+  "actual_host_addresses_included": false,
+  "latest_results_date": "2026-10-11",
+  "latest_report": "docs/WIRED-OPTIMIZATION-2026-10-11.zh-TW.md"
 }

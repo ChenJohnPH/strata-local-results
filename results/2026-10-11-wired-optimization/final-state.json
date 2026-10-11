@@ -1,0 +1,9 @@
+{
+  "completed_client_date": "2026-10-11",
+  "both_models_auto_verified": true,
+  "both_models_memory_headroom_verified": true,
+  "both_models_reuse_verified": true,
+  "model_state": "unloaded",
+  "monitor_active": false,
+  "generation_busy": false
+}

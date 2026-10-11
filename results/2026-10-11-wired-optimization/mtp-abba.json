@@ -1,0 +1,303 @@
+{
+  "order": [
+    0,
+    0.5,
+    0.5,
+    0
+  ],
+  "models": {
+    "IQ3_S": {
+      "arms": [
+        {
+          "spec_min_p": 0,
+          "workloads": {
+            "prose": {
+              "cache_n": 26,
+              "prompt_n": 7,
+              "prompt_ms": 97.5,
+              "prompt_per_token_ms": 13.929,
+              "prompt_per_second": 71.8,
+              "predicted_n": 256,
+              "predicted_ms": 6037.3,
+              "predicted_per_token_ms": 23.583,
+              "predicted_per_second": 42.4,
+              "draft_n": 417,
+              "draft_n_accepted": 116
+            },
+            "code": {
+              "cache_n": 33,
+              "prompt_n": 7,
+              "prompt_ms": 120.5,
+              "prompt_per_token_ms": 17.214,
+              "prompt_per_second": 58.1,
+              "predicted_n": 256,
+              "predicted_ms": 4620.7,
+              "predicted_per_token_ms": 18.05,
+              "predicted_per_second": 55.4,
+              "draft_n": 249,
+              "draft_n_accepted": 172
+            }
+          }
+        },
+        {
+          "spec_min_p": 0.5,
+          "workloads": {
+            "prose": {
+              "cache_n": 26,
+              "prompt_n": 7,
+              "prompt_ms": 87.7,
+              "prompt_per_token_ms": 12.529,
+              "prompt_per_second": 79.8,
+              "predicted_n": 256,
+              "predicted_ms": 5134.5,
+              "predicted_per_token_ms": 20.057,
+              "predicted_per_second": 49.9,
+              "draft_n": 180,
+              "draft_n_accepted": 102
+            },
+            "code": {
+              "cache_n": 33,
+              "prompt_n": 7,
+              "prompt_ms": 103.7,
+              "prompt_per_token_ms": 14.814,
+              "prompt_per_second": 67.5,
+              "predicted_n": 256,
+              "predicted_ms": 4636.9,
+              "predicted_per_token_ms": 18.113,
+              "predicted_per_second": 55.2,
+              "draft_n": 233,
+              "draft_n_accepted": 164
+            }
+          }
+        },
+        {
+          "spec_min_p": 0.5,
+          "workloads": {
+            "prose": {
+              "cache_n": 26,
+              "prompt_n": 7,
+              "prompt_ms": 89.7,
+              "prompt_per_token_ms": 12.814,
+              "prompt_per_second": 78.0,
+              "predicted_n": 256,
+              "predicted_ms": 4968.7,
+              "predicted_per_token_ms": 19.409,
+              "predicted_per_second": 51.5,
+              "draft_n": 186,
+              "draft_n_accepted": 101
+            },
+            "code": {
+              "cache_n": 33,
+              "prompt_n": 7,
+              "prompt_ms": 108.0,
+              "prompt_per_token_ms": 15.429,
+              "prompt_per_second": 64.8,
+              "predicted_n": 256,
+              "predicted_ms": 4304.7,
+              "predicted_per_token_ms": 16.815,
+              "predicted_per_second": 59.5,
+              "draft_n": 221,
+              "draft_n_accepted": 167
+            }
+          }
+        },
+        {
+          "spec_min_p": 0,
+          "workloads": {
+            "prose": {
+              "cache_n": 26,
+              "prompt_n": 7,
+              "prompt_ms": 99.4,
+              "prompt_per_token_ms": 14.2,
+              "prompt_per_second": 70.4,
+              "predicted_n": 256,
+              "predicted_ms": 5925.4,
+              "predicted_per_token_ms": 23.146,
+              "predicted_per_second": 43.2,
+              "draft_n": 408,
+              "draft_n_accepted": 120
+            },
+            "code": {
+              "cache_n": 33,
+              "prompt_n": 7,
+              "prompt_ms": 119.6,
+              "prompt_per_token_ms": 17.086,
+              "prompt_per_second": 58.5,
+              "predicted_n": 256,
+              "predicted_ms": 4636.3,
+              "predicted_per_token_ms": 18.111,
+              "predicted_per_second": 55.2,
+              "draft_n": 267,
+              "draft_n_accepted": 168
+            }
+          }
+        }
+      ],
+      "comparison": {
+        "0": {
+          "rates": {
+            "prose": 42.8,
+            "code": 55.3
+          },
+          "score": 48.650179855782646
+        },
+        "0.5": {
+          "rates": {
+            "prose": 50.7,
+            "code": 57.35
+          },
+          "score": 53.922583395085965
+        }
+      },
+      "adopted": true
+    },
+    "IQ3_XXS": {
+      "arms": [
+        {
+          "spec_min_p": 0,
+          "workloads": {
+            "prose": {
+              "cache_n": 26,
+              "prompt_n": 7,
+              "prompt_ms": 80.8,
+              "prompt_per_token_ms": 11.543,
+              "prompt_per_second": 86.6,
+              "predicted_n": 256,
+              "predicted_ms": 4886.8,
+              "predicted_per_token_ms": 19.089,
+              "predicted_per_second": 52.4,
+              "draft_n": 417,
+              "draft_n_accepted": 116
+            },
+            "code": {
+              "cache_n": 33,
+              "prompt_n": 7,
+              "prompt_ms": 95.8,
+              "prompt_per_token_ms": 13.686,
+              "prompt_per_second": 73.1,
+              "predicted_n": 256,
+              "predicted_ms": 3686.9,
+              "predicted_per_token_ms": 14.402,
+              "predicted_per_second": 69.4,
+              "draft_n": 264,
+              "draft_n_accepted": 169
+            }
+          }
+        },
+        {
+          "spec_min_p": 0.5,
+          "workloads": {
+            "prose": {
+              "cache_n": 26,
+              "prompt_n": 7,
+              "prompt_ms": 86.5,
+              "prompt_per_token_ms": 12.357,
+              "prompt_per_second": 80.9,
+              "predicted_n": 256,
+              "predicted_ms": 4301.5,
+              "predicted_per_token_ms": 16.803,
+              "predicted_per_second": 59.5,
+              "draft_n": 190,
+              "draft_n_accepted": 95
+            },
+            "code": {
+              "cache_n": 33,
+              "prompt_n": 7,
+              "prompt_ms": 86.5,
+              "prompt_per_token_ms": 12.357,
+              "prompt_per_second": 80.9,
+              "predicted_n": 256,
+              "predicted_ms": 3453.3,
+              "predicted_per_token_ms": 13.489,
+              "predicted_per_second": 74.1,
+              "draft_n": 228,
+              "draft_n_accepted": 169
+            }
+          }
+        },
+        {
+          "spec_min_p": 0.5,
+          "workloads": {
+            "prose": {
+              "cache_n": 26,
+              "prompt_n": 7,
+              "prompt_ms": 77.0,
+              "prompt_per_token_ms": 11.0,
+              "prompt_per_second": 90.9,
+              "predicted_n": 256,
+              "predicted_ms": 4241.4,
+              "predicted_per_token_ms": 16.568,
+              "predicted_per_second": 60.4,
+              "draft_n": 161,
+              "draft_n_accepted": 96
+            },
+            "code": {
+              "cache_n": 33,
+              "prompt_n": 7,
+              "prompt_ms": 94.2,
+              "prompt_per_token_ms": 13.457,
+              "prompt_per_second": 74.3,
+              "predicted_n": 256,
+              "predicted_ms": 3443.0,
+              "predicted_per_token_ms": 13.449,
+              "predicted_per_second": 74.4,
+              "draft_n": 227,
+              "draft_n_accepted": 167
+            }
+          }
+        },
+        {
+          "spec_min_p": 0,
+          "workloads": {
+            "prose": {
+              "cache_n": 26,
+              "prompt_n": 7,
+              "prompt_ms": 84.4,
+              "prompt_per_token_ms": 12.057,
+              "prompt_per_second": 82.9,
+              "predicted_n": 256,
+              "predicted_ms": 5343.0,
+              "predicted_per_token_ms": 20.871,
+              "predicted_per_second": 47.9,
+              "draft_n": 405,
+              "draft_n_accepted": 120
+            },
+            "code": {
+              "cache_n": 33,
+              "prompt_n": 7,
+              "prompt_ms": 83.1,
+              "prompt_per_token_ms": 11.871,
+              "prompt_per_second": 84.2,
+              "predicted_n": 256,
+              "predicted_ms": 3587.5,
+              "predicted_per_token_ms": 14.014,
+              "predicted_per_second": 71.4,
+              "draft_n": 264,
+              "draft_n_accepted": 169
+            }
+          }
+        }
+      ],
+      "comparison": {
+        "0": {
+          "rates": {
+            "prose": 50.15,
+            "code": 70.4
+          },
+          "score": 59.41851563275542
+        },
+        "0.5": {
+          "rates": {
+            "prose": 59.95,
+            "code": 74.25
+          },
+          "score": 66.71796984321391
+        }
+      },
+      "adopted": false
+    }
+  },
+  "tokens": 256,
+  "warm_tokens_per_arm_per_workload": 128,
+  "publication_note": "The adopted flag records the initial calibration capacity decision on 2026-10-10. IQ3_XXS was subsequently confirmed with restored capacity on 2026-10-11; see mtp05-confirm-resumed in runtime-optimization.json and the actual final settings in auto-validation.json."
+}

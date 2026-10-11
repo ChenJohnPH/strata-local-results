@@ -1,0 +1,366 @@
+{
+  "date_local": "2026-10-11",
+  "timezone": "Asia/Taipei",
+  "generated_utc": "2026-10-11T01:41:14.318254+00:00",
+  "measurement_dates": [
+    "2026-10-10",
+    "2026-10-11"
+  ],
+  "engine": {
+    "version": "0.1.40.3",
+    "upstream": "https://github.com/Niko1221/Strata",
+    "fork": "https://github.com/NTRYourWaifu/Strata/tree/two-pc",
+    "fork_commit": "7add08dbd076f7f5fe897c76769064332450fe61"
+  },
+  "hardware": {
+    "desktop": {
+      "os": "Ubuntu 22.04.5 LTS",
+      "cpu": "AMD Ryzen 9 9950X",
+      "physical_cores": 16,
+      "logical_threads": 32,
+      "gpu": "NVIDIA RTX 4080 SUPER",
+      "vram_gb": 16,
+      "ram_gb": 32,
+      "ssd_capacity_user_reported_tb": [
+        2,
+        1
+      ]
+    },
+    "laptop": {
+      "os": "Windows 11",
+      "cpu": "AMD Ryzen 9 7945HX",
+      "physical_cores": 16,
+      "logical_threads": 32,
+      "gpu": "NVIDIA RTX 4070 Laptop",
+      "vram_gb": 8,
+      "ram_gb": 32,
+      "ram_modules_gb": [
+        16,
+        16
+      ],
+      "configured_ram_mt_s": 4800,
+      "ssd_capacity_user_reported_tb": [
+        2,
+        1
+      ]
+    }
+  },
+  "network": {
+    "model_transport": "Direct LAN TCP",
+    "both_devices_wired": true,
+    "link_speed_gbps": 1,
+    "ssh_role": "management and local API forwarding"
+  },
+  "method": {
+    "temperature": 0,
+    "thinking": false,
+    "stream": false,
+    "metric": "timings.predicted_per_second",
+    "quantization_and_context_preserved": true,
+    "final_validation": {
+      "tokens": 512,
+      "runs_per_workload": 1,
+      "startup_warm_tokens_per_workload": 128,
+      "aggregate": "single observation, not a repeated median"
+    },
+    "short_calibration": {
+      "tokens": 256,
+      "runs_per_workload": 2,
+      "excluded_warm_tokens_per_workload": 128,
+      "aggregate": "median of two",
+      "caveat": "Some measurements use a hotter expert cache and were made on different dates; not a controlled causal improvement estimate."
+    },
+    "mtp_abba": {
+      "order": [
+        0,
+        0.5,
+        0.5,
+        0
+      ],
+      "tokens": 256,
+      "warm_tokens_per_arm_per_workload": 128,
+      "runs_per_cutoff_per_workload": 2
+    }
+  },
+  "prompts": {
+    "prose": "請用繁體中文寫一篇至少一千字的科普文章，解釋颱風如何形成，直接開始正文。",
+    "code": "Write a complete Python implementation of an LRU cache with TTL expiration, thread safety, and example usage. Explain the design after the code."
+  },
+  "models": {
+    "IQ3_S": {
+      "settings": {
+        "split": 36,
+        "desktop_cpu_budget_gib": 23.25,
+        "laptop_cpu_budget_gib": 5.75,
+        "desktop_pool_workers": 15,
+        "laptop_pool_workers": 15,
+        "pcie_frac": 0,
+        "prefill_chunk": 512,
+        "desktop_reserve_mib": 640,
+        "laptop_reserve_mib": 640,
+        "file_release": 1,
+        "spec_min_p": 0.5,
+        "context": 8192,
+        "warmup_tokens": 128
+      },
+      "split": {
+        "desktop_layers": 36,
+        "laptop_layers": 12
+      },
+      "final_validation_512": {
+        "prose": {
+          "decode_tok_s": 52.6,
+          "http_elapsed_s": 10.266,
+          "completion_tokens": 512,
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 33,
+            "prompt_ms": 531.1,
+            "prompt_per_token_ms": 16.094,
+            "prompt_per_second": 62.1,
+            "predicted_n": 512,
+            "predicted_ms": 9725.4,
+            "predicted_per_token_ms": 18.995,
+            "predicted_per_second": 52.6,
+            "draft_n": 374,
+            "draft_n_accepted": 225
+          },
+          "usage": {
+            "prompt_tokens": 33,
+            "completion_tokens": 512,
+            "total_tokens": 545,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          }
+        },
+        "code": {
+          "decode_tok_s": 51.7,
+          "http_elapsed_s": 10.984,
+          "completion_tokens": 512,
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 40,
+            "prompt_ms": 1067.0,
+            "prompt_per_token_ms": 26.675,
+            "prompt_per_second": 37.5,
+            "predicted_n": 512,
+            "predicted_ms": 9896.9,
+            "predicted_per_token_ms": 19.33,
+            "predicted_per_second": 51.7,
+            "draft_n": 446,
+            "draft_n_accepted": 352
+          },
+          "usage": {
+            "prompt_tokens": 40,
+            "completion_tokens": 512,
+            "total_tokens": 552,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          }
+        }
+      },
+      "mtp_abba": {
+        "0": {
+          "rates": {
+            "prose": 42.8,
+            "code": 55.3
+          },
+          "score": 48.650179855782646
+        },
+        "0.5": {
+          "rates": {
+            "prose": 50.7,
+            "code": 57.35
+          },
+          "score": 53.922583395085965
+        }
+      },
+      "capacity_and_reuse_verified": true,
+      "resources_before": {
+        "desktop": {
+          "available_gib": 2.2772560119628906,
+          "engine_reclaim_ram_gib": 25.25,
+          "engine_swap_mib": 359.671875,
+          "file_blobs": 1381,
+          "file_mb": 11419.1,
+          "resident_gib": 23.25
+        },
+        "laptop": {
+          "available_gib": 9.724346160888672,
+          "commit_available_gib": 5.8895263671875,
+          "worker_reclaim_ram_gib": 8.8216552734375,
+          "worker_reclaim_commit_gib": 16.515338897705078,
+          "worker_working_set_gib": 8.8216552734375,
+          "file_stats_available": false,
+          "file_blobs": null,
+          "file_mb": null,
+          "full_resident_mode": true
+        }
+      },
+      "resources_after": {
+        "desktop": {
+          "available_gib": 2.263965606689453,
+          "engine_reclaim_ram_gib": 25.25,
+          "engine_swap_mib": 302.91796875,
+          "file_blobs": 3989,
+          "file_mb": 12326.6,
+          "resident_gib": 23.25
+        },
+        "laptop": {
+          "available_gib": 9.354686737060547,
+          "commit_available_gib": 5.932430267333984,
+          "worker_reclaim_ram_gib": 9.231388092041016,
+          "worker_reclaim_commit_gib": 16.51593017578125,
+          "worker_working_set_gib": 9.231388092041016,
+          "file_stats_available": false,
+          "file_blobs": null,
+          "file_mb": null,
+          "full_resident_mode": true
+        }
+      }
+    },
+    "IQ3_XXS": {
+      "settings": {
+        "split": 38,
+        "desktop_cpu_budget_gib": 20.75,
+        "laptop_cpu_budget_gib": 5.25,
+        "desktop_pool_workers": 8,
+        "laptop_pool_workers": 8,
+        "pcie_frac": 0,
+        "prefill_chunk": 512,
+        "desktop_reserve_mib": 800,
+        "laptop_reserve_mib": 800,
+        "file_release": 0,
+        "spec_min_p": 0.5,
+        "context": 16384,
+        "warmup_tokens": 128
+      },
+      "split": {
+        "desktop_layers": 38,
+        "laptop_layers": 10
+      },
+      "final_validation_512": {
+        "prose": {
+          "decode_tok_s": 57.7,
+          "http_elapsed_s": 9.297,
+          "completion_tokens": 512,
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 33,
+            "prompt_ms": 426.2,
+            "prompt_per_token_ms": 12.915,
+            "prompt_per_second": 77.4,
+            "predicted_n": 512,
+            "predicted_ms": 8874.0,
+            "predicted_per_token_ms": 17.332,
+            "predicted_per_second": 57.7,
+            "draft_n": 345,
+            "draft_n_accepted": 222
+          },
+          "usage": {
+            "prompt_tokens": 33,
+            "completion_tokens": 512,
+            "total_tokens": 545,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          }
+        },
+        "code": {
+          "decode_tok_s": 61.0,
+          "http_elapsed_s": 9.078,
+          "completion_tokens": 512,
+          "timings": {
+            "cache_n": 0,
+            "prompt_n": 40,
+            "prompt_ms": 673.9,
+            "prompt_per_token_ms": 16.848,
+            "prompt_per_second": 59.4,
+            "predicted_n": 512,
+            "predicted_ms": 8399.5,
+            "predicted_per_token_ms": 16.405,
+            "predicted_per_second": 61.0,
+            "draft_n": 463,
+            "draft_n_accepted": 337
+          },
+          "usage": {
+            "prompt_tokens": 40,
+            "completion_tokens": 512,
+            "total_tokens": 552,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          }
+        }
+      },
+      "mtp_abba": {
+        "0": {
+          "rates": {
+            "prose": 50.15,
+            "code": 70.4
+          },
+          "score": 59.41851563275542
+        },
+        "0.5": {
+          "rates": {
+            "prose": 59.95,
+            "code": 74.25
+          },
+          "score": 66.71796984321391
+        }
+      },
+      "capacity_and_reuse_verified": true,
+      "resources_before": {
+        "desktop": {
+          "available_gib": 5.516521453857422,
+          "engine_reclaim_ram_gib": 18.60857391357422,
+          "engine_swap_mib": 843.484375,
+          "file_blobs": 0,
+          "file_mb": 10799.4,
+          "resident_gib": 20.66
+        },
+        "laptop": {
+          "available_gib": 12.49127197265625,
+          "commit_available_gib": 7.544769287109375,
+          "worker_reclaim_ram_gib": 6.591396331787109,
+          "worker_reclaim_commit_gib": 14.963924407958984,
+          "worker_working_set_gib": 6.591396331787109,
+          "file_stats_available": false,
+          "file_blobs": null,
+          "file_mb": null,
+          "full_resident_mode": true
+        }
+      },
+      "resources_after": {
+        "desktop": {
+          "available_gib": 5.479499816894531,
+          "engine_reclaim_ram_gib": 22.35219955444336,
+          "engine_swap_mib": 808.7734375,
+          "file_blobs": 0,
+          "file_mb": 10799.4,
+          "resident_gib": 20.66
+        },
+        "laptop": {
+          "available_gib": 12.49258804321289,
+          "commit_available_gib": 7.550941467285156,
+          "worker_reclaim_ram_gib": 6.591533660888672,
+          "worker_reclaim_commit_gib": 14.963924407958984,
+          "worker_working_set_gib": 6.591533660888672,
+          "file_stats_available": false,
+          "file_blobs": null,
+          "file_mb": null,
+          "full_resident_mode": true
+        }
+      }
+    }
+  },
+  "privacy": {
+    "actual_addresses_included": false,
+    "credentials_included": false,
+    "private_chats_included": false,
+    "security_configuration_included": false,
+    "deployment_management_scripts_included": false
+  }
+}
